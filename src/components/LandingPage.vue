@@ -1,72 +1,104 @@
 <template>
-    <!-- slider -->
-  <div class="slider">
-<!-- items -->
- <div class="list">
-    <div class="item active">
-        <img src="https://zubayrlatief.github.io/capestone-hosted-images/landingpic.png" alt="" class="item">
-        <div class="content">
-            <p>Hermess Fitness</p>
-            <h2>slider 1</h2>
-            <p></p>
+    <div class="slider">
+      <div class="list">
+        <div v-for="(item, index) in items" :key="index" class="item" :class="{ active: index === itemActive }">
+          <img :src="item.image" alt="item" />
+          <div class="content">
+            <p>{{ item.title }}</p>
+            <h2>{{ item.subtitle }}</h2>
+          </div>
         </div>
+      </div>
+      <!-- button arrows -->
+      <div class="arrows">
+        <button id="prev" @click="prevSlide">-</button>
+        <button id="next" @click="nextSlide">+</button>
+      </div>
+      <!-- thumbnail -->
+      <div class="thumbnail">
+        <div
+          v-for="(thumbnail, index) in items"
+          :key="index"
+          class="item"
+          :class="{ active: index === itemActive }"
+          @click="selectSlide(index)"
+        >
+          <img :src="thumbnail.image" alt="thumbnail" />
+          <div class="content">{{ thumbnail.title }}</div>
+        </div>
+      </div>
     </div>
- </div>
+  </template>
+  
+  <script>
+  export default {
+    data() {
+      return {
+        items: [
+          {
+            image: "https://zubayrlatief.github.io/capestone-hosted-images/landingpic.png",
+            title: "Hermess Fitness",
+            subtitle: "Ecomerce site",
+          },
+          {
+            image: "https://zubayrlatief.github.io/capestone-hosted-images/landing%20pic%202.png",
+            title: "Regal Redifiend",
+            subtitle: "Ecomerce clothing",
+          },
+          {
+            image: "https://zubayrlatief.github.io/capestone-hosted-images/landingpic.png",
+            title: "Zubayr and Mapule Pet Shop",
+            subtitle: "Ecomerce Pet shop",
+          },
+          {
+            image: "https://zubayrlatief.github.io/capestone-hosted-images/landing%20pic%202.png",
+            title: "Keyboard",
+            subtitle: "Keyboard",
+          },
+        ],
+        itemActive: 0,
+        refreshInterval: null,
+      };
+    },
+    mounted() {
+      this.startAutoSlide();
+    },
+    methods: {
+      nextSlide() {
+        this.itemActive = (this.itemActive + 1) % this.items.length;
+        this.resetAutoSlide();
+      },
+      prevSlide() {
+        this.itemActive = (this.itemActive - 1 + this.items.length) % this.items.length;
+        this.resetAutoSlide();
+      },
+      selectSlide(index) {
+        this.itemActive = index;
+        this.resetAutoSlide();
+      },
+      showSlider() {
+        // This method is now handled reactively by Vue's reactivity system.
+      },
+      startAutoSlide() {
+        this.refreshInterval = setInterval(this.nextSlide, 5000);
+      },
+      resetAutoSlide() {
+        clearInterval(this.refreshInterval);
+        this.startAutoSlide();
+      },
+    },
+    beforeDestroy() {
+      clearInterval(this.refreshInterval);
+    },
+  };
+  </script>
 
- <!-- items -->
- <div class="list">
-    <div class="item">
-        <img src="https://zubayrlatief.github.io/capestone-hosted-images/landing%20pic%202.png" alt="" class="item">
-        <div class="content">
-            <p>Regal Redifiend</p>
-            <h2>slider 2</h2>
-            <p></p>
-        </div>
-    </div>
- </div>
-
- <!-- items -->
- <div class="list">
-    <div class="item">
-        <img src="https://zubayrlatief.github.io/hosted-images/shoulder.jpg" alt="" class="item">
-        <div class="content">
-            <p>Zubayr & Mapule Pet Shop</p>
-            <h2>slider 3</h2>
-            <p></p>
-        </div>
-    </div>
- </div>
-
- <!-- items -->
- <div class="list">
-    <div class="item">
-        <img src="https://zubayrlatief.github.io/capestone-hosted-images/landing%20pic%202.png" alt="" class="item">
-        <div class="content">
-            <p>Keyboard</p>
-            <h2>slider 4</h2>
-            <p></p>
-        </div>
-    </div>
-    <div class="arrows">
-            <button id="prev">></button>
-            <button id="next">></button>
-        </div>
- </div>
-
-
-</div>
-</template>
-
-<script>
-export default {
-
-}
-</script>
 
 <style>
+
 .slider{
-    height: 100vh;
-    margin-top: 0px;
+    height: 82vh;
+    margin-top: 10px;
 }
 
 .slider .list .item{
@@ -80,6 +112,7 @@ export default {
 .slider .list .item img{
     width: 100%;
     height: 100%;
+    margin-top: 7%;
     object-fit: contain;
 }
 
@@ -161,5 +194,52 @@ export default {
 .arrows button:hover{
     background-color: #eee;
     color: black;
+}
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    z-index: 11;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 250px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    overflow: auto;
+    justify-content: center;
+}
+.thumbnail::-webkit-scrollbar{
+    width: 0;
+}
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    filter: brightness(.5);
+    transition: .5s;
+    flex-shrink: 0;
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.thumbnail .item.active{
+    filter: brightness(1.5);
+}
+.thumbnail .item .content{
+    position: absolute;
+    inset: auto 10px 10px 10px;
+}
+@media screen and (max-width: 678px) {
+    .thumbnail{
+        justify-content: start;
+    }
+    .slider .list .item .content h2{
+        font-size: 60px;
+    }
+    .arrows{
+        top: 10%;
+    }
 }
 </style>
