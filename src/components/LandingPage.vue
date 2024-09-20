@@ -36,22 +36,22 @@
       return {
         items: [
           {
-            image: "https://zubayrlatief.github.io/capestone-hosted-images/landingpic.png",
+            image: "https://zubayrlatief.github.io/Images-/hermessfitness.png",
             title: "Hermess Fitness",
-            subtitle: "Ecomerce site",
+            subtitle: "Gym Clothes ",
           },
           {
-            image: "https://zubayrlatief.github.io/capestone-hosted-images/landing%20pic%202.png",
+            image: "https://zubayrlatief.github.io/Images-/RegalRedifiend.png",
             title: "Regal Redifiend",
-            subtitle: "Ecomerce clothing",
+            subtitle: "Old Fashion",
           },
           {
-            image: "https://zubayrlatief.github.io/capestone-hosted-images/landingpic.png",
+            image: "https://zubayrlatief.github.io/Images-/ZMpetshop.png",
             title: "Zubayr and Mapule Pet Shop",
-            subtitle: "Ecomerce Pet shop",
+            subtitle: "Pet Shop",
           },
           {
-            image: "https://zubayrlatief.github.io/capestone-hosted-images/landing%20pic%202.png",
+            image: "https://zubayrlatief.github.io/Images-/Calculator.png",
             title: "Keyboard",
             subtitle: "Keyboard",
           },
@@ -98,7 +98,7 @@
 
 .slider{
     height: 82vh;
-    margin-top: 10px;
+    
 }
 
 .slider .list .item{
@@ -112,7 +112,7 @@
 .slider .list .item img{
     width: 100%;
     height: 100%;
-    margin-top: 7%;
+    margin-top: 6%;
     object-fit: contain;
 }
 
@@ -167,12 +167,15 @@
     filter: blur(20px);
     opacity: 0;
     animation: showContent .5s .7s ease-in-out 1 forwards;
+    color: #afafaf;
 }
 .slider .list .item.active h2{
     animation-delay: 1s;
+    color: #afafaf;
 }
 .slider .list .item.active p:nth-child(3){
     animation-duration: 1.3s;
+    
 }
 .arrows{
     position: absolute;
@@ -181,7 +184,7 @@
     z-index: 100;
 }
 .arrows button{
-    background-color: #eee5;
+    background-color: rgba(129, 126, 126, 0.333);
     border: none;
     font-family: monospace;
     width: 40px;

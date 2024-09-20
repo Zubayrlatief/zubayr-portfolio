@@ -1,7 +1,7 @@
 <template>
     <section class="about">
       <div class="main">
-        <img src="https://zubayrlatief.github.io/hosted-images/myportfolioimg.jpg" alt="Profile Image">
+        <img src="https://zubayrlatief.github.io/hosted-images/myportfolioimg.jpg" alt="Profile Image" class="fade-in-image">
         <div class="about-text">
           <h1>Zubayr Abdullatief</h1>
           <h5>Aspiring Fullstack<span>Developer</span></h5>
@@ -12,9 +12,6 @@
       </div>
     </section>
   </template>
-  
-  <script>
-  </script>
   
   <style scoped>
   .about {
@@ -33,6 +30,21 @@
       margin: 0 auto;
   }
   
+  /* Fade-in animation for the image */
+  .fade-in-image {
+      opacity: 0;
+      animation: fadeIn 6s ease-in forwards;
+  }
+  
+  @keyframes fadeIn {
+      0% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
+      }
+  }
+  
   .about img {
       height: auto;
       width: 100%;
@@ -41,9 +53,14 @@
   }
   
   .about-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       color: white;
-      max-width: 500px; 
+      max-width: 500px;
       width: 100%;
+      text-align: center;
   }
   
   .about-text h1 {
@@ -93,13 +110,13 @@
   
   @media (max-width: 768px) {
       .main {
-          flex-direction: column; /* Stack image and text vertically */
+          flex-direction: column;
           align-items: center;
       }
   
       .about img {
-          margin: 0 0 20px 0; /* Space between image and text */
-          max-width: 100%; /* Ensure image fits within container */
+          margin: 0 0 20px 0;
+          max-width: 100%;
       }
   
       .about-text {
