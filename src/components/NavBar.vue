@@ -10,16 +10,20 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About me</a>
+            <a class="nav-link" href="#about">About me</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Experience</a>
+            <a class="nav-link" href="experience">Experience</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">What I'm good at</a>
+            <a class="nav-link" href="skills">What I'm good at</a>
+          </li>
+          <li class="nav-item">
+            <!-- Link to footer -->
+            <a class="nav-link" href="#footer">Contact</a> <!-- Added this link -->
           </li>
         </ul>
       </div>
@@ -32,12 +36,11 @@ export default {}
 </script>
 
 <style scoped>
-/* Apply Poppins Font to Navbar */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
 .navbar {
   font-family: 'Poppins', sans-serif;
-  background-color: black;
+  background-color: transparent;
 }
 
 .img {
@@ -55,11 +58,10 @@ export default {}
   font-weight: 600;
 }
 
-/* Make navbar sticky */
 .sticky-top {
-  position: -webkit-sticky; /* For Safari */
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 1030; /* Ensure navbar stays above other content */
+  z-index: 1030;
 }
 </style>

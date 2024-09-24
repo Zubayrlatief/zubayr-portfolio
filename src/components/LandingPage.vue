@@ -1,4 +1,5 @@
 <template>
+  <section id="home" >
     <div class="slider">
       <div class="list">
         <div v-for="(item, index) in items" :key="index" class="item" :class="{ active: index === itemActive }">
@@ -28,7 +29,9 @@
         </div>
       </div>
     </div>
+  </section>
   </template>
+
   
   <script>
   export default {
@@ -98,6 +101,7 @@
 
 .slider{
     height: 82vh;
+    animation: sliderAnimation 0.5s ease-out forwards; /* Added animation */
     
 }
 
@@ -112,7 +116,7 @@
 .slider .list .item img{
     width: 100%;
     height: 100%;
-    margin-top: 6%;
+    margin-top: 5%;
     object-fit: contain;
 }
 
@@ -244,5 +248,17 @@
     .arrows{
         top: 10%;
     }
+}
+
+
+@keyframes sliderAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(200px) scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 </style>

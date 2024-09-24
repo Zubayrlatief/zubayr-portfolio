@@ -1,17 +1,33 @@
 <template>
-    <section class="about">
+    <section id="about" class="about">
+        <h2 class="section-title text-center">About Me</h2>
       <div class="main">
         <img src="https://zubayrlatief.github.io/hosted-images/myportfolioimg.jpg" alt="Profile Image" class="fade-in-image">
         <div class="about-text">
           <h1>Zubayr Abdullatief</h1>
           <h5>Aspiring Fullstack<span>Developer</span></h5>
-          <p>Providing Ecommerce solutions in the front and backend of your company.<br>
-          Entering the world of software is exciting, a lot of knowledge to gain and limitless ceilings to reach. The possibilities are endless. I am a rounded person taking interest in a few passions. Being obsessive when I become passionate about something, I want to learn everything about it. Keeping disciplined and healthy is a must for me; I work out 5 times a week. I enjoy surfing and gaining knowledge in every aspect possible.</p>
-          <button type="button" href="contact">Get in touch</button>
+          <p>
+            Providing Ecommerce solutions in the front and backend of your company.<br>
+            Entering the world of software is exciting, a lot of knowledge to gain and limitless ceilings to reach. The possibilities are endless. Being obsessive when I become passionate about something, I want to learn everything about it. Keeping disciplined and healthy is a must for me; I work out 5 times a week. I enjoy surfing and gaining knowledge in every aspect possible.
+          </p>
+          <button type="button" @click="scrollToFooter">Get in touch</button>
         </div>
       </div>
     </section>
   </template>
+  
+  <script>
+  export default {
+    methods: {
+      scrollToFooter() {
+        const footer = document.getElementById("footer");
+        if (footer) {
+          footer.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    }
+  }
+  </script>
   
   <style scoped>
   .about {
@@ -25,11 +41,20 @@
       align-items: center;
       justify-content: center;
       flex-wrap: wrap; 
-      width: 90%;
-      max-width: 1200px;
+      width: 100%;
       margin: 0 auto;
   }
   
+  .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(70, 68, 68);
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: poppins;
+  padding: 6rem;
+} 
+
   /* Fade-in animation for the image */
   .fade-in-image {
       opacity: 0;

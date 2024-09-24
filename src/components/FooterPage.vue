@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer text-white text-center">
+  <footer id="footer" class="footer text-white text-center"> <!-- Added 'id' to the footer -->
     <div class="container p-4">
       <!-- Section: Contact Form -->
       <section class="mb-4">
@@ -40,31 +40,27 @@
             </div>
           </div>
         </form>
-        <!-- Phone Number -->
         <p class="mt-3">Contact: 067 507 0088</p>
       </section>
-      <!-- Section: Contact Form -->
 
       <!-- Section: Social Links -->
       <section class="mb-4">
         <h5>Connect with Me</h5>
-        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/yourusername" target="_blank">
+        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/Zubayrlatief" target="_blank">
           <i class="fab fa-github"></i>
         </a>
-        <a class="btn btn-outline-light btn-floating m-1" href="https://linkedin.com/in/yourusername" target="_blank">
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/zubayrlatief" target="_blank">
           <i class="fab fa-linkedin-in"></i>
         </a>
-        <a class="btn btn-outline-light btn-floating m-1" href="https://leetcode.com/yourusername" target="_blank">
-          <i class="fab fa-leetcode"></i>
+        <a class="btn btn-outline-light btn-floating m-1" href="https://leetcode.com/zubayrlatief" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" style="width: 20px; height: 20px;">
         </a>
-        <a class="btn btn-outline-light btn-floating m-1" href="https://stackoverflow.com/users/youruserid" target="_blank">
+        <a class="btn btn-outline-light btn-floating m-1" href="https://stackoverflow.com/users/25161660/zubi" target="_blank">
           <i class="fab fa-stack-overflow"></i>
         </a>
       </section>
-      <!-- Section: Social Links -->
     </div>
 
-    <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
       © {{ new Date().getFullYear() }} Zubayr Abdullatief
     </div>
@@ -87,8 +83,6 @@ export default {
         email: this.email,
         message: this.message
       });
-      // Here you can add your form submission logic, like sending the data to your backend
-      // Reset the form after submission
       this.name = '';
       this.email = '';
       this.message = '';
