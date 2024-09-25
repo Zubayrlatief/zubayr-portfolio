@@ -5,6 +5,7 @@
     <AboutPage/>
     <SkillsPage/>
     <ExperiencePage/>
+    <EducationPage/>
     <FooterPage/>
     
   </div>
@@ -17,6 +18,7 @@ import AboutPage from './components/AboutPage.vue'
 import SkillsPage from './components/SkillsPage.vue'
 import ExperiencePage from './components/ExperiencePage.vue';
 import FooterPage from './components/FooterPage.vue';
+import EducationPage from './components/EducationPage.vue';
 
 export default {
   components: {
@@ -25,6 +27,7 @@ export default {
     AboutPage,
     SkillsPage,
     ExperiencePage,
+    EducationPage,
     FooterPage
 
   }

@@ -1,5 +1,5 @@
 <template>
-  <section id="home" >
+  <section id="home">
     <div class="slider">
       <div class="list">
         <div v-for="(item, index) in items" :key="index" class="item" :class="{ active: index === itemActive }">
@@ -15,22 +15,27 @@
         <button id="prev" @click="prevSlide">-</button>
         <button id="next" @click="nextSlide">+</button>
       </div>
-      <!-- thumbnail -->
+      <!-- updated thumbnail -->
       <div class="thumbnail">
         <div
           v-for="(thumbnail, index) in items"
           :key="index"
-          class="item"
+          class="box"
           :class="{ active: index === itemActive }"
           @click="selectSlide(index)"
         >
-          <img :src="thumbnail.image" alt="thumbnail" />
-          <div class="content">{{ thumbnail.title }}</div>
+          <img :src="thumbnail.image" alt="thumbnail" class="sr" />
+          <div class="overlay">
+            <div class="buttons">
+              <button class="button-1" @click.stop="goToLink(thumbnail.github)">GitHub</button>
+              <button class="button-2" @click.stop="goToLink(thumbnail.live)">Live Demo</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  </template>
+</template>
 
   
   <script>
@@ -42,21 +47,30 @@
             image: "https://zubayrlatief.github.io/Images-/hermessfitness.png",
             title: "Hermess Fitness",
             subtitle: "Gym Clothes ",
+            github: "",
+            live: "",
+            
           },
           {
             image: "https://zubayrlatief.github.io/Images-/RegalRedifiend.png",
             title: "Regal Redifiend",
             subtitle: "Old Fashion",
+            github: "",
+            live: "",
           },
           {
             image: "https://zubayrlatief.github.io/Images-/ZMpetshop.png",
             title: "Zubayr and Mapule Pet Shop",
             subtitle: "Pet Shop",
+            github: "",
+            live: "",
           },
           {
             image: "https://zubayrlatief.github.io/Images-/Calculator.png",
             title: "Keyboard",
             subtitle: "Keyboard",
+            github: "",
+            live: "",
           },
         ],
         itemActive: 0,
@@ -202,19 +216,81 @@
     background-color: #eee;
     color: black;
 }
-.thumbnail{
-    position: absolute;
-    bottom: 50px;
-    z-index: 11;
-    display: flex;
-    gap: 10px;
-    width: 100%;
-    height: 250px;
-    padding: 0 50px;
-    box-sizing: border-box;
-    overflow: auto;
-    justify-content: center;
+.thumbnail {
+  position: absolute;
+  bottom: 50px;
+  z-index: 11;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: 250px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  overflow: auto;
+  justify-content: center;
 }
+
+.thumbnail .box {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  width: 150px; /* Adjust width as needed */
+  height: 220px; /* Adjust height as needed */
+  filter: brightness(.5);
+}
+
+.thumbnail .box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail .box.active {
+  filter: brightness(1.5);
+}
+
+.thumbnail .overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(28, 28, 28, 0.8) 58%);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.thumbnail .box:hover .overlay {
+  opacity: 1;
+}
+
+.thumbnail .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.thumbnail .button-1, .thumbnail .button-2 {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #554d4d;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.thumbnail .button-1:hover, .thumbnail .button-2:hover {
+  background-color: #2a2727;
+}
+
 .thumbnail::-webkit-scrollbar{
     width: 0;
 }
