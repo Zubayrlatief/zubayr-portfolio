@@ -117,7 +117,7 @@
   
   button {
       background: khaki;
-      color: white;
+      color: rgb(78, 72, 72);
       text-decoration: none;
       border: 2px solid transparent;
       padding: 13px 30px;

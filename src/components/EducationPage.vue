@@ -1,6 +1,6 @@
 <template>
     <div class="heading">
-      <h2 class="section-title text-center">Places i have studied</h2>
+      <h2 class="section-title text-center">Places I have studied</h2>
       <div class="education-section">
         <div class="wrapper">
           <div class="box-area">
@@ -36,7 +36,7 @@
             image: "https://zubayrlatief.github.io/Images-/Untitled design.png"
           },
           {
-            degree: "Bootcamp",
+            degree: "Academy",
             institution: "Life Choices",
             year: "2024-2024",
             image: "https://zubayrlatief.github.io/Images-/Untitled%20design%20(1).png"

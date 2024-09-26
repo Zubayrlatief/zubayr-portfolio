@@ -69,7 +69,7 @@ export default {
           title: "Weather.io",
           subtitle: "Vue.js",
           github: "https://github.com/Zubayrlatief/Weather-io.git",
-          live: "https://weather-kk69tqv62-zubayr-s-projects.vercel.app/",
+          live: "https://weather-io-wine.vercel.app/",
         },
       ],
       itemActive: 0,

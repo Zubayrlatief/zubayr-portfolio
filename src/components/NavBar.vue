@@ -16,10 +16,10 @@
             <a class="nav-link" href="#about">About me</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#skills">What I'm good at</a>
+            <a class="nav-link" href="#skills">Skills</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#experience">Experience</a>
+            <a class="nav-link" href="#experience">Experience & Education</a>
           </li>
           <li class="nav-item">
             <!-- Link to footer -->

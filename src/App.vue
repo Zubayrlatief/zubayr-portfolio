@@ -1,7 +1,8 @@
 <template>
  <div id="app">
+    <LandingComp/>
     <NavBar/> 
-    <LandingPage/>
+    <ProjectPage/>
     <AboutPage/>
     <SkillsPage/>
     <ExperiencePage/>
@@ -12,7 +13,8 @@
 </template>
 
 <script>
-import LandingPage from './components/LandingPage.vue'
+import LandingComp from './components/LandingComp.vue'
+import ProjectPage from './components/ProjectPage.vue'
 import NavBar from './components/NavBar.vue'
 import AboutPage from './components/AboutPage.vue'
 import SkillsPage from './components/SkillsPage.vue'
@@ -22,8 +24,9 @@ import EducationPage from './components/EducationPage.vue';
 
 export default {
   components: {
+    LandingComp,
     NavBar,
-    LandingPage,
+    ProjectPage,
     AboutPage,
     SkillsPage,
     ExperiencePage,
