@@ -14,14 +14,7 @@
             />
             <div class="overlay">
               <h3>{{ skill.name }}</h3>
-              <h5>Competency: {{ skill.competency }}%</h5>
-              <div class="progress">
-                <div
-                  class="progress-bar"
-                  :style="{ width: skill.competency + '%' }"
-                ></div>
-              </div>
-              <p>{{ skill.competency }}%</p>
+              <h5>{{ skill.competency }}</h5>
             </div>
           </div>
         </div>
@@ -141,19 +134,5 @@ p {
   height: 100%;
 }
 
-/* Progress bar styles */
-.progress {
-  background-color: #d8d8d8;
-  border-radius: 10px;
-  height: 10px;
-  width: 100%; /* Fixed width for all progress bars */
-  margin-top: 10px;
-  overflow: hidden;
-}
-
-.progress-bar {
-  height: 100%;
-  background-color: black; /* Fill color */
-  transition: width 0.3s ease;
-}
+/* Removed progress bar styles */
 </style>
