@@ -23,7 +23,7 @@ export default {
     // After 5 seconds, trigger the slide-up effect
     setTimeout(() => {
       this.isVisible = false;
-    }, 2000);
+    }, 3500);
   },
 };
 </script>
