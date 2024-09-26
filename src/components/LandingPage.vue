@@ -38,77 +38,80 @@
 </template>
 
   
-  <script>
-  export default {
-    data() {
-      return {
-        items: [
-          {
-            image: "https://zubayrlatief.github.io/Images-/hermessfitness.png",
-            title: "Hermess Fitness",
-            subtitle: "Gym Clothes ",
-            github: "",
-            live: "",
-            
-          },
-          {
-            image: "https://zubayrlatief.github.io/Images-/RegalRedifiend.png",
-            title: "Regal Redifiend",
-            subtitle: "Old Fashion",
-            github: "",
-            live: "",
-          },
-          {
-            image: "https://zubayrlatief.github.io/Images-/ZMpetshop.png",
-            title: "Zubayr and Mapule Pet Shop",
-            subtitle: "Pet Shop",
-            github: "",
-            live: "",
-          },
-          {
-            image: "https://zubayrlatief.github.io/Images-/Calculator.png",
-            title: "Keyboard",
-            subtitle: "Keyboard",
-            github: "",
-            live: "",
-          },
-        ],
-        itemActive: 0,
-        refreshInterval: null,
-      };
+<script>
+export default {
+  data() {
+    return {
+      items: [
+        {
+          image: "https://zubayrlatief.github.io/Images-/hermessfitness.png",
+          title: "Hermess Fitness",
+          subtitle: "Vue.js",
+          github: "https://github.com/Zubayrlatief/capstone.git",
+          live: "https://capstone-965d2.web.app/",
+        },
+        {
+          image: "https://zubayrlatief.github.io/Images-/RegalRedifiend.png",
+          title: "Regal Redifiend",
+          subtitle: "Javascript",
+          github: "https://github.com/Zubayrlatief/Regal-Redifiend-Javascript-EOMP.git",
+          live: "https://javascript-eomp-2.vercel.app/",
+        },
+        {
+          image: "https://zubayrlatief.github.io/Images-/ZMpetshop.png",
+          title: "Zubayr and Mapule Pet Shop",
+          subtitle: "Vue.js",
+          github: "https://github.com/Zubayrlatief/node-eomp.git",
+          live: "https://node-eomp-1o2enjfu5-zubayr-s-projects.vercel.app/",
+        },
+        {
+          image: "https://zubayrlatief.github.io/Images-/weather.io.png",
+          title: "Weather.io",
+          subtitle: "Vue.js",
+          github: "https://github.com/Zubayrlatief/Weather-io.git",
+          live: "https://weather-kk69tqv62-zubayr-s-projects.vercel.app/",
+        },
+      ],
+      itemActive: 0,
+      refreshInterval: null,
+    };
+  },
+  mounted() {
+    this.startAutoSlide();
+  },
+  methods: {
+    nextSlide() {
+      this.itemActive = (this.itemActive + 1) % this.items.length;
+      this.resetAutoSlide();
     },
-    mounted() {
+    prevSlide() {
+      this.itemActive = (this.itemActive - 1 + this.items.length) % this.items.length;
+      this.resetAutoSlide();
+    },
+    selectSlide(index) {
+      this.itemActive = index;
+      this.resetAutoSlide();
+    },
+    startAutoSlide() {
+      this.refreshInterval = setInterval(this.nextSlide, 5000);
+    },
+    resetAutoSlide() {
+      clearInterval(this.refreshInterval);
       this.startAutoSlide();
     },
-    methods: {
-      nextSlide() {
-        this.itemActive = (this.itemActive + 1) % this.items.length;
-        this.resetAutoSlide();
-      },
-      prevSlide() {
-        this.itemActive = (this.itemActive - 1 + this.items.length) % this.items.length;
-        this.resetAutoSlide();
-      },
-      selectSlide(index) {
-        this.itemActive = index;
-        this.resetAutoSlide();
-      },
-      showSlider() {
-        // This method is now handled reactively by Vue's reactivity system.
-      },
-      startAutoSlide() {
-        this.refreshInterval = setInterval(this.nextSlide, 5000);
-      },
-      resetAutoSlide() {
-        clearInterval(this.refreshInterval);
-        this.startAutoSlide();
-      },
+    goToLink(url) {
+      if (url) {
+        window.open(url, "_blank");
+      } else {
+        console.log("No URL provided");
+      }
     },
-    beforeDestroy() {
-      clearInterval(this.refreshInterval);
-    },
-  };
-  </script>
+  },
+  beforeDestroy() {
+    clearInterval(this.refreshInterval);
+  },
+};
+</script>
 
 
 <style>

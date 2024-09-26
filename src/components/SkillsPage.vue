@@ -1,5 +1,5 @@
 <template>
-  <div class="heading">
+  <div id="skills" class="heading">
     <h2 class="section-title text-center">My Skills</h2>
     <div class="skills-section">
       <div class="wrapper">
@@ -38,7 +38,7 @@ export default {
     };
   },
   mounted() {
-    fetch("https://zubayrlatief.github.io/Api-portfolio/data/index.json?" + new Date().getTime())
+    fetch("https://zubayrlatief.github.io/working-api-portfolio/data/index.json?" + new Date().getTime())
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok ' + response.statusText);
@@ -64,7 +64,7 @@ export default {
 
 .skills-section {
   background-color: #000000;
-  padding: 50px 0;
+  padding: 10px 0;
   width: 100%;
 }
 

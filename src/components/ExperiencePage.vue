@@ -54,7 +54,7 @@ export default {
   margin-bottom: 50px;
   text-align: center;
   font-family: poppins;
-  padding: 7rem;
+  padding: 1rem;
 } 
 .wrapper{
     padding: 40px 10%;

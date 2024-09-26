@@ -50,11 +50,12 @@
   <style scoped>
   .heading {
     background-color: rgb(0, 0, 0);
+    
+    padding-top: 2rem;
   }
   
   .education-section {
     background-color: #000000;
-    padding: 50px 0;
     width: 100%;
   }
   
@@ -77,7 +78,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
-    margin-top: 50px;
+    margin-top: 10px;
   }
   
   .box {

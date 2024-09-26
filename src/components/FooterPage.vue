@@ -1,5 +1,6 @@
 <template>
-  <footer id="footer" class="footer text-white text-center"> <!-- Added 'id' to the footer -->
+  <footer id="footer" class="footer text-white text-center">
+    <!-- Added 'id' to the footer -->
     <div class="container p-4">
       <!-- Section: Contact Form -->
       <section class="mb-4">
@@ -77,12 +78,32 @@ export default {
     };
   },
   methods: {
-    handleSubmit() {
-      console.log('Form submitted:', {
-        name: this.name,
-        email: this.email,
-        message: this.message
-      });
+    async handleSubmit() {
+      const formData = new FormData();
+      formData.append('name', this.name);
+      formData.append('email', this.email);
+      formData.append('message', this.message);
+
+      try {
+        const response = await fetch('https://formspree.io/f/xldrqegy', {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json'
+          },
+          body: formData
+        });
+
+        if (response.ok) {
+          alert('Message sent successfully!');
+        } else {
+          alert('Failed to send the message. Please try again.');
+        }
+      } catch (error) {
+        console.error('Form submit error:', error);
+        alert('An error occurred. Please try again later.');
+      }
+
+      // Clear the form
       this.name = '';
       this.email = '';
       this.message = '';
