@@ -62,7 +62,7 @@ export default {
           title: "Zubayr and Mapule Pet Shop",
           subtitle: "Vue.js",
           github: "https://github.com/Zubayrlatief/node-eomp.git",
-          live: "https://node-eomp-1o2enjfu5-zubayr-s-projects.vercel.app/",
+          live: "https://node-eomp.vercel.app/",
         },
         {
           image: "https://zubayrlatief.github.io/Images-/weather.io.png",
