@@ -3,7 +3,7 @@
     <h2 class="section-title text-center">My Skills</h2>
     <div class="skills-section">
       <div class="wrapper">
-        <div class="box-area">
+        <div class="box-area skills-area">
           <!-- Loop through the skillsData to display each skill -->
           <div class="box" v-for="skill in skillsData" :key="skill.name">
             <img
@@ -24,8 +24,8 @@
     <!-- Soft Skills Section -->
     <div id="soft-skills" class="heading">
       <h2 class="section-title text-center">My Soft Skills</h2>
-      <div class="wrapper">
-        <div class="box-area soft-skills-area"> <!-- Using the same box-area class -->
+      <div class="wrapper soft-skills-wrapper">
+        <div class="box-area soft-skills-area">
           <!-- Loop through the softSkillsData to display each soft skill -->
           <div class="box" v-for="softSkill in softSkillsData" :key="softSkill.title">
             <img
@@ -87,7 +87,7 @@ export default {
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: rgb(70, 68, 68);
   padding-top: 2rem;
@@ -96,25 +96,39 @@ export default {
 }
 
 .wrapper {
-  display: flex; /* Use flexbox for centering */
-  justify-content: center; /* Center horizontally */
-  padding: 40px 10%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 5%;
 }
 
-.box-area {
-  display: grid; /* Change to grid for soft skills */
-  grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
-  grid-gap: 40px; /* Spacing between boxes */
-  margin-top: 50px;
+.skills-area {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Displays skills in rows of three */
+  grid-gap: 30px; /* Increased spacing between skills */
+  margin-top: 30px;
+}
+
+.soft-skills-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.soft-skills-area {
+  display: flex; /* Display soft skills side by side */
+  gap: 30px; /* Space between each soft skill */
+  flex-wrap: wrap; /* Allows wrapping if the screen is not wide enough */
 }
 
 .box {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
   transition: transform 0.3s ease;
-  padding: 4rem;
+  padding: 0.5rem; /* Reduced padding to make boxes smaller */
+  width: 200px; /* Set a width for skills and soft skills */
+  height: 250px; /* Set a height for skills and soft skills */
 }
 
 .overlay {
@@ -130,18 +144,18 @@ export default {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 40px;
+  padding: 0 10px;
   text-align: center;
-  font-size: 14px;
+  font-size: 10px;
   transition: height 0.5s;
 }
 
 .overlay h3 {
   font-weight: 500;
   margin-bottom: 5px;
-  margin-top: 80%;
+  margin-top: 50%;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 30px;
+  font-size: 18px;
   letter-spacing: 2px;
   color: aliceblue;
 }
@@ -149,13 +163,84 @@ export default {
 .overlay h5,
 p {
   color: rgb(133, 139, 145);
+  font-size: 12px;
 }
 
 .box:hover img {
-  transform: scale(1.1);
+  transform: scale(1.02); /* Reduced scaling */
 }
 
 .box:hover .overlay {
   height: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .skills-area {
+    grid-template-columns: repeat(2, 1fr); /* Adjust columns to 2 for tablets */
+    grid-gap: 20px;
+  }
+
+  .wrapper {
+    padding: 10px 5%;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .box {
+    width: 180px; /* Adjust box size for smaller screens */
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-area {
+    grid-template-columns: repeat(2, 1fr); /* Adjust columns to 2 for smaller screens */
+    grid-gap: 20px;
+  }
+
+  .wrapper {
+    padding: 10px 5%;
+  }
+
+  .box {
+    width: 150px; /* Adjust box size for smaller screens */
+    height: 200px;
+  }
+
+  .overlay h3 {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-area {
+    grid-template-columns: 1fr; /* Adjust to single column for small screens */
+    grid-gap: 15px;
+  }
+
+  .soft-skills-area {
+    flex-direction: column; /* Stack soft skills vertically for small screens */
+    gap: 15px;
+  }
+
+  .box {
+    width: 120px; /* Adjust box size for smaller screens */
+    height: 180px;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .overlay h3 {
+    font-size: 14px;
+  }
 }
 </style>
