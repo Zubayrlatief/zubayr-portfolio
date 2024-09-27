@@ -52,6 +52,12 @@
             </svg>
             067 507 0088
           </h2>
+          <h3>
+      <a href="mailto:zubayrlatie007@gmail.com">
+        <i class="bi bi-envelope-fill"></i>
+      </a>
+      zubayrlatie007@gmail.com
+    </h3>
         </div>
       </div>
 
@@ -143,5 +149,13 @@ export default {
 .flag{
   height: 10vh;
 
+}
+
+a {
+  color: white; /* Default text color for the link */
+}
+
+a:hover {
+  color: grey; /* Change color on hover */
 }
 </style>

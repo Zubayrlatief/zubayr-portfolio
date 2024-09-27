@@ -1,6 +1,6 @@
 <template>
-    <div class="heading">
-      <h2 class="section-title text-center">Education</h2>
+    <div id="Education" class="heading">
+      <h2 class="section-title text-center">Education & Experience</h2>
       <div class="education-section">
         <div class="wrapper">
           <div class="box-area">

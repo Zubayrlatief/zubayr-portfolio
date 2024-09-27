@@ -2,11 +2,11 @@
  <div id="app">
     <LandingComp/>
     <NavBar/> 
-    <ProjectPage/>
-    <AboutPage/>
-    <SkillsPage/>
-    <ExperiencePage/>
+    <AboutPage/>    
     <EducationPage/>
+    <ExperiencePage/>
+    <SkillsPage/>
+    <ProjectPage/>
     <FooterPage/>
     
   </div>

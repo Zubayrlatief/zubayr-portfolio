@@ -1,6 +1,5 @@
 <template>
   <section id="experience" class="experience">
-    <h2 class="section-title text-center">My Experience</h2>
     <div id="card">
       <div class="wrapper">
         <div class="box-area">

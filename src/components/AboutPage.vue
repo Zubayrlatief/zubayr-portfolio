@@ -1,6 +1,5 @@
 <template>
     <section id="about" class="about">
-        <h2 class="section-title text-center">About Me</h2>
       <div class="main">
         <img src="https://zubayrlatief.github.io/hosted-images/myportfolioimg.jpg" alt="Profile Image" class="fade-in-image">
         <div class="about-text">

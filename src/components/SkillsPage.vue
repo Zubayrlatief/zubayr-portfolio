@@ -20,6 +20,28 @@
         </div>
       </div>
     </div>
+
+    <!-- Soft Skills Section -->
+    <div id="soft-skills" class="heading">
+      <h2 class="section-title text-center">My Soft Skills</h2>
+      <div class="wrapper">
+        <div class="box-area soft-skills-area"> <!-- Using the same box-area class -->
+          <!-- Loop through the softSkillsData to display each soft skill -->
+          <div class="box" v-for="softSkill in softSkillsData" :key="softSkill.title">
+            <img
+              :src="softSkill.url"
+              :alt="softSkill.title"
+              class="sr"
+              style="width: 100%; height: auto; border-radius: 10px;"
+            />
+            <div class="overlay">
+              <h3>{{ softSkill.title }}</h3>
+              <h5>{{ softSkill.description }}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -28,6 +50,7 @@ export default {
   data() {
     return {
       skillsData: [], // This will hold the skills from your JSON file
+      softSkillsData: [], // This will hold the soft skills from your JSON file
     };
   },
   mounted() {
@@ -44,6 +67,7 @@ export default {
           ...skill,
           competency: skill.competency || 50 // Default to 50 if not provided
         }));
+        this.softSkillsData = data.softSkills; // Set the soft skills data
       })
       .catch((error) => console.error("Error fetching skills data:", error));
   },
@@ -55,7 +79,8 @@ export default {
   background-color: rgb(0, 0, 0);
 }
 
-.skills-section {
+.skills-section,
+.soft-skills-section {
   background-color: #000000;
   padding: 10px 0;
   width: 100%;
@@ -65,7 +90,7 @@ export default {
   font-size: 2.5rem;
   font-weight: 700;
   color: rgb(70, 68, 68);
-  margin-bottom: 50px;
+  padding-top: 2rem;
   text-align: center;
   font-family: poppins;
 }
@@ -77,9 +102,9 @@ export default {
 }
 
 .box-area {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 40px;
+  display: grid; /* Change to grid for soft skills */
+  grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+  grid-gap: 40px; /* Spacing between boxes */
   margin-top: 50px;
 }
 
@@ -89,7 +114,7 @@ export default {
   overflow: hidden;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
   transition: transform 0.3s ease;
-  padding: 5rem;
+  padding: 4rem;
 }
 
 .overlay {
@@ -133,6 +158,4 @@ p {
 .box:hover .overlay {
   height: 100%;
 }
-
-/* Removed progress bar styles */
 </style>

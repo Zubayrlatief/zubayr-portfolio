@@ -10,20 +10,19 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#home">Projects</a>
+            <a class="nav-link" aria-current="page" href="#about">About Me</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about">About me</a>
+            <a class="nav-link" href="#Education">Education & Experience</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#skills">Skills</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#experience">Experience & Education</a>
+            <a class="nav-link" href="#home">Projects</a>
           </li>
           <li class="nav-item">
-            <!-- Link to footer -->
-            <a class="nav-link" href="#footer">Contact</a> <!-- Added this link -->
+            <a class="nav-link" href="#footer">Contact</a> 
           </li>
         </ul>
       </div>
