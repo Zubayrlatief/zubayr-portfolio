@@ -10,7 +10,7 @@
                 :src="education.image"
                 :alt="education.institution"
                 class="sr"
-                style="width: 100%; height: auto; border-radius: 10px;"
+                style="width: 140%; height: auto; border-radius: 10px;"
               />
               <div class="overlay">
                 <h3>{{ education.degree }}</h3>
@@ -33,13 +33,13 @@
             degree: "NSC Bacholors",
             institution: "Claremont High School",
             year: "2019-2023",
-            image: "https://zubayrlatief.github.io/Images-/Untitled design.png"
+            image: "https://zubayrlatief.github.io/Images-/claremontcorrect.png"
           },
           {
             degree: "Academy",
             institution: "Life Choices",
             year: "2024-2024",
-            image: "https://zubayrlatief.github.io/Images-/Untitled%20design%20(1).png"
+            image: "https://zubayrlatief.github.io/Images-/KC%20Auto.png"
           }
         ]
       };
