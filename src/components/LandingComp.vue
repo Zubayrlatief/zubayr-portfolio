@@ -20,7 +20,7 @@ export default {
     };
   },
   mounted() {
-    // After 5 seconds, trigger the slide-up effect
+    // After 3.5 seconds, trigger the slide-up effect
     setTimeout(() => {
       this.isVisible = false;
     }, 3500);
@@ -58,12 +58,12 @@ export default {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3rem; /* Base font size */
   margin: 0;
 }
 
 .animated-subheading {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Base font size */
   margin-top: 10px;
   overflow: hidden; /* Ensure the text stays within the bounds */
   white-space: nowrap; /* Prevent text from wrapping */
@@ -83,7 +83,8 @@ h1 {
 
 /* Blinking cursor effect */
 @keyframes blink-caret {
-  from, to {
+  from,
+  to {
     border-color: transparent;
   }
   50% {
@@ -97,12 +98,62 @@ h1 {
   object-fit: cover; /* Makes the image scale well within its container */
 }
 
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2.5rem; /* Reduce font size for medium screens */
+  }
+
+  .animated-subheading {
+    font-size: 1.2rem; /* Reduce subheading font size */
+  }
+
+  .full-page-component img {
+    max-width: 50%; /* Adjust image width */
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem; /* Further reduce font size for smaller screens */
+  }
+
+  .animated-subheading {
+    font-size: 1rem; /* Further reduce subheading font size */
+  }
+
+  .content-container {
+    flex-direction: column; /* Stack image above text */
+    align-items: center; /* Center the content */
+  }
+
+  .full-page-component img {
+    max-width: 70%; /* Adjust image width */
+    max-height: 50vh; /* Adjust max height */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem; /* Further reduce font size for mobile */
+  }
+
+  .animated-subheading {
+    font-size: 0.9rem; /* Further reduce subheading font size */
+  }
+
+  .full-page-component img {
+    max-width: 90%; /* Adjust image width for small screens */
+    max-height: 60vh; /* Adjust max height */
+    padding-bottom: 80%;
+  }
+}
+
 .full-page-component.slide-up {
   transform: translateY(-100%);
   opacity: 0;
 }
 </style>
-
 
 
 <!-- https://zubayrlatief.github.io/hosted-images/myportfolioimg.jpg -->
