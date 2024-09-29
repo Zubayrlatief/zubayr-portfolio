@@ -10,7 +10,7 @@
               :src="education.image"
               :alt="education.institution"
               class="sr"
-              style="width: 140%; height: auto; border-radius: 10px;"
+              style="width: 100%; height: auto; border-radius: 10px;"
             />
             <div class="overlay">
               <h3>{{ education.degree }}</h3>
@@ -39,7 +39,7 @@ export default {
                   degree: "Academy",
                   institution: "Life Choices",
                   year: "2024-2024",
-                  image: "https://zubayrlatief.github.io/Images-/lifechoices.png"
+                  image: "https://zubayrlatief.github.io/capestone-hosted-images/lifechoices.png"
               }
           ]
       };
