@@ -51,7 +51,7 @@ export default {
           live: "https://capstone-965d2.web.app/",
         },
         {
-          image: "https://zubayrlatief.github.io/Images-/RegalRedifiend.png",
+          image: "https://zubayrlatief.github.io/capestone-hosted-images/regalredifiend.png ",
           title: "Regal Redifiend",
           subtitle: "Javascript",
           github: "https://github.com/Zubayrlatief/Regal-Redifiend-Javascript-EOMP.git",
