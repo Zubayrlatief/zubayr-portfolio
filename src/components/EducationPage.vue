@@ -5,12 +5,16 @@
       <div class="wrapper">
         <div class="box-area">
           <!-- Loop through the educationData to display each education item -->
-          <div class="box" v-for="education in educationData" :key="education.institution">
+          <div
+            class="box"
+            v-for="education in educationData"
+            :key="education.institution"
+          >
             <img
               :src="education.image"
               :alt="education.institution"
               class="sr"
-              style="width: 100%; height: auto; border-radius: 10px;"
+              style="width: 100%; height: auto; border-radius: 10px"
             />
             <div class="overlay">
               <h3>{{ education.degree }}</h3>
@@ -21,30 +25,28 @@
         </div>
       </div>
     </div>
-  </div>
+    <div class="btn-container">
+  <button class="btn" @click="redirectToCertificates">
+    <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/aws.png" alt="AWS Logo" class="btn-image" />
+    <span>View Certificates</span>
+  </button>
+</div>
+
+
+</div>
+
 </template>
 
 <script>
 export default {
-  data() {
-      return {
-          educationData: [
-              {
-                  degree: "NSC Bachelor",
-                  institution: "Claremont High School",
-                  year: "2019-2023",
-                  image: "https://zubayrlatief.github.io/Images-/claremontcorrect.png"
-              },
-              {
-                  degree: "Academy",
-                  institution: "Life Choices",
-                  year: "2024-2024",
-                  image: "https://zubayrlatief.github.io/capestone-hosted-images/lifechoices.png"
-              }
-          ]
-      };
+  methods: {
+    redirectToCertificates() {
+      window.open('https://drive.google.com/file/d/18mLnKsP1FTXvYsCqfQTo3FbHUNt2YxQX/view?usp=sharing', '_blank');
+    }
   }
+
 };
+
 </script>
 
 <style scoped>
@@ -68,29 +70,28 @@ export default {
 }
 
 .wrapper {
-  display: flex; /* Use flexbox for centering */
-  justify-content: center; /* Center horizontally */
+  display: flex;
+  justify-content: center;
   padding: 40px 10%;
 }
 
 .box-area {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grid adjusts based on screen size */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 40px;
   margin-top: 10px;
 }
 
-/* Responsive Flexbox for smaller screens */
 @media (max-width: 768px) {
   .box-area {
-      display: flex; /* Change to flexbox for smaller screens */
-      flex-wrap: wrap; /* Allow wrapping to next line */
-      justify-content: center; /* Center the items */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .box {
-      margin: 10px; /* Add some margin between boxes */
-      flex: 1 1 calc(33.33% - 20px); /* Make each box take up one-third of the width */
+    margin: 10px;
+    flex: 1 1 calc(33.33% - 20px);
   }
 }
 
@@ -126,7 +127,7 @@ export default {
   font-weight: 500;
   margin-bottom: 5px;
   margin-top: 80%;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 30px;
   letter-spacing: 2px;
   color: aliceblue;
@@ -145,58 +146,142 @@ p {
   height: 100%;
 }
 
-/* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
   .section-title {
-      font-size: 2rem; /* Adjust the title font size */
+    font-size: 2rem;
   }
 
   .box {
-      padding: 4rem; /* Reduce padding for medium screens */
+    padding: 4rem;
   }
 
   .wrapper {
-      padding: 30px 5%; /* Adjust wrapper padding */
+    padding: 30px 5%;
   }
 }
 
 @media (max-width: 768px) {
   .section-title {
-      font-size: 1.8rem; /* Adjust title font size for smaller screens */
+    font-size: 1.8rem;
   }
 
   .box {
-      padding: 3rem; /* Reduce padding for smaller screens */
+    padding: 3rem;
   }
 
   .wrapper {
-      padding: 20px 5%; /* Adjust wrapper padding */
+    padding: 20px 5%;
   }
 
   .overlay h3 {
-      font-size: 24px; /* Reduce the heading size in the overlay */
+    font-size: 24px;
   }
 }
 
 @media (max-width: 480px) {
   .section-title {
-      font-size: 1.5rem; /* Further adjust title font size for mobile */
+    font-size: 1.5rem;
   }
 
   .box {
-      padding: 2rem; /* Reduce padding for mobile */
+    padding: 2rem;
   }
 
   .wrapper {
-      padding: 10px 5%; /* Further adjust wrapper padding */
+    padding: 10px 5%;
   }
 
   .overlay h3 {
-      font-size: 20px; /* Further reduce the heading size in the overlay */
+    font-size: 20px;
   }
 
   .overlay {
-      padding: 0 20px; /* Reduce padding in the overlay */
+    padding: 0 20px;
   }
 }
+
+/* button to  awsCerts */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  --color: #4f5c59;
+  --color2: rgb(130, 147, 152);
+  background-color: transparent;
+  transition: 0.5s;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-weight: 300;
+  font-size: 17px;
+  font-family: poppins;
+  text-transform: uppercase;
+  color: var(--color);
+}
+
+.btn-image {
+  width: 32px; /* Adjust image width */
+  height: 32px; /* Adjust image height */
+  margin-right: 10px; /* Space between image and text */
+}
+
+.inner-button {
+  padding: 0.4em 1em; /* Inner button padding */
+  background-color: var(--color); /* Inner button background color */
+  color: rgb(88, 78, 78); /* Text color for the inner button */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 14px; /* Font size for the inner button */
+  text-transform: uppercase; /* Text transformation for inner button */
+  margin-left: 10px; /* Space between text and inner button */
+}
+
+/* Centering the inner button */
+.btn {
+  padding: 2em;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.inner-button:hover {
+
+  background-color: var(--color2); /* Change background color on hover */
+}
+
+
+
+.btn::before {
+  margin: 2em;
+  top: -50%;
+  left: -25%;
+  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn:hover::before {
+  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn:hover::after {
+  transform: skew(45deg) translate(-50%, -50%);
+}
+
+.btn:hover {
+  color: var(--color2);
+}
+
+.btn:active {
+  filter: brightness(0.7);
+  transform: scale(0.98);
+}
+
 </style>
