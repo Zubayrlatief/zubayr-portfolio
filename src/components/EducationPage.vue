@@ -25,28 +25,44 @@
         </div>
       </div>
     </div>
-    <div class="btn-container">
-  <button class="btn" @click="redirectToCertificates">
-    <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/aws.png" alt="AWS Logo" class="btn-image" />
-    <span>View Certificates</span>
-  </button>
+   <div class="btn-container">
+<button class="btn" @click="redirectToCertificates">
+  <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/aws.png" alt="AWS Logo" class="btn-image" />
+  <span>View Certificates</span>
+</button> 
 </div>
 
 
-</div>
-
+  </div>
 </template>
 
 <script>
 export default {
-  methods: {
-    redirectToCertificates() {
-      window.open('https://drive.google.com/file/d/18mLnKsP1FTXvYsCqfQTo3FbHUNt2YxQX/view?usp=sharing', '_blank');
-    }
+  data() {
+    return {
+      educationData: [
+        {
+          degree: "NSC Bachelor",
+          institution: "Claremont High School",
+          year: "2019-2023",
+          image: "https://zubayrlatief.github.io/Images-/claremontcorrect.png",
+        },
+        {
+          degree: "Academy",
+          institution: "Life Choices",
+          year: "2024-2024",
+          image:
+            "https://zubayrlatief.github.io/capestone-hosted-images/lifechoices.png",
+        },
+      ],
+    };
+  },
+      methods: {
+  redirectToCertificates() {
+    window.open('https://drive.google.com/file/d/18mLnKsP1FTXvYsCqfQTo3FbHUNt2YxQX/view?usp=sharing', '_blank');
   }
-
+}
 };
-
 </script>
 
 <style scoped>

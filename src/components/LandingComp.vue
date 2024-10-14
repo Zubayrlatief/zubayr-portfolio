@@ -27,7 +27,17 @@ export default {
   },
 };
 </script>
+methods: {
+  redirectToCertificates() {
+    window.open('https://drive.google.com/file/d/18mLnKsP1FTXvYsCqfQTo3FbHUNt2YxQX/view?usp=sharing', '_blank');
+  }
+}
 
+<!-- <div class="btn-container">
+<button class="btn" @click="redirectToCertificates">
+  <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/aws.png" alt="AWS Logo" class="btn-image" />
+  <span>View Certificates</span>
+</button> -->
 <style scoped>
 .full-page-component {
   position: fixed;
