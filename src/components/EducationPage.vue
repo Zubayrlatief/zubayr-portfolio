@@ -5,18 +5,9 @@
     <div class="education-section">
       <div class="wrapper">
         <div class="box-area">
-          <!-- Loop through the educationData to display each education item -->
-          <div
-            class="box"
-            v-for="education in educationData"
-            :key="education.institution"
-          >
-            <img
-              :src="education.image"
-              :alt="education.institution"
-              class="sr"
-              style="width: 100%; height: auto; border-radius: 10px"
-            />
+          <div class="box" v-for="education in educationData" :key="education.institution">
+            <img :src="education.image" :alt="education.institution" class="sr"
+              style="width: 100%; height: auto; border-radius: 10px" />
             <div class="overlay">
               <h3>{{ education.degree }}</h3>
               <h5>{{ education.institution }}</h5>
@@ -26,12 +17,13 @@
         </div>
       </div>
     </div>
-   <div class="btn-container">
-<button class="btn" @click="redirectToCertificates">
-  <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/aws.png" alt="AWS Logo" class="btn-image" />
-  <span>View Certificates</span>
-</button> 
-</div>
+    <div class="btn-container">
+      <button class="btn" @click="redirectToCertificates">
+        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/aws.png" alt="AWS Logo"
+          class="btn-image" />
+        <span>View Certificates</span>
+      </button>
+    </div>
 
 
   </div>
@@ -58,11 +50,11 @@ export default {
       ],
     };
   },
-      methods: {
-  redirectToCertificates() {
-    window.open('https://drive.google.com/file/d/18mLnKsP1FTXvYsCqfQTo3FbHUNt2YxQX/view?usp=sharing', '_blank');
+  methods: {
+    redirectToCertificates() {
+      window.open('https://drive.google.com/file/d/18mLnKsP1FTXvYsCqfQTo3FbHUNt2YxQX/view?usp=sharing', '_blank');
+    }
   }
-}
 };
 </script>
 
@@ -86,7 +78,7 @@ export default {
   font-family: poppins;
 }
 
-.subheading-title{
+.subheading-title {
   font-size: 1.5rem;
   font-weight: 200;
   color: rgb(48, 46, 46);
@@ -226,7 +218,6 @@ p {
   }
 }
 
-/* button to  awsCerts */
 .btn-container {
   display: flex;
   justify-content: center;
@@ -255,33 +246,32 @@ p {
 }
 
 .btn-image {
-  width: 32px; /* Adjust image width */
-  height: 32px; /* Adjust image height */
-  margin-right: 10px; /* Space between image and text */
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
 }
 
 .inner-button {
-  padding: 0.4em 1em; /* Inner button padding */
-  background-color: var(--color); /* Inner button background color */
-  color: rgb(88, 78, 78); /* Text color for the inner button */
-  border: none; /* Remove border */
-  border-radius: 4px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor */
-  font-size: 14px; /* Font size for the inner button */
-  text-transform: uppercase; /* Text transformation for inner button */
-  margin-left: 10px; /* Space between text and inner button */
+  padding: 0.4em 1em;
+  background-color: var(--color);
+  color: rgb(88, 78, 78);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-left: 10px;
 }
 
-/* Centering the inner button */
 .btn {
   padding: 2em;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
+  flex-direction: column;
+  align-items: center;
 }
 
 .inner-button:hover {
 
-  background-color: var(--color2); /* Change background color on hover */
+  background-color: var(--color2);
 }
 
 
@@ -309,5 +299,4 @@ p {
   filter: brightness(0.7);
   transform: scale(0.98);
 }
-
 </style>

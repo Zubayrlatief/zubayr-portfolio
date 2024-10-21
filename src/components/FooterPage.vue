@@ -2,7 +2,6 @@
   <footer id="footer" class="footer text-white text-center">
     <div class="container p-4">
       <div class="row">
-        <!-- Section: Contact Form -->
         <div class="col-md-6 mb-4">
           <h5>Contact Me</h5>
           <form @submit.prevent="handleSubmit">
@@ -26,7 +25,6 @@
           </form>
         </div>
 
-        <!-- Section: Location -->
         <div class="col-md-6 mb-4">
           <h5>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
@@ -35,13 +33,12 @@
             </svg>
             Location
           </h5>
-          <p><img class="flag" src="https://raw.githubusercontent.com/HatScripts/circle-flags/6452fa836a38e8e46b0d1833d3e83dbcef194d6b/flags/za.svg"></p>
-          <!-- Replace this text with your actual location -->
+          <p><img class="flag"
+              src="https://raw.githubusercontent.com/HatScripts/circle-flags/6452fa836a38e8e46b0d1833d3e83dbcef194d6b/flags/za.svg">
+          </p>
           <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.8)">
             Cape Town, Crawford
           </p>
-          <!-- Replace with your address -->
-
           <h2 class="mt-3">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -53,15 +50,14 @@
             067 507 0088
           </h2>
           <h3>
-      <a href="mailto:zubayrlatie007@gmail.com">
-        <i class="bi bi-envelope-fill"></i>
-      </a>
-      zubayrlatie007@gmail.com
-    </h3>
+            <a href="mailto:zubayrlatie007@gmail.com">
+              <i class="bi bi-envelope-fill"></i>
+            </a>
+            zubayrlatie007@gmail.com
+          </h3>
         </div>
       </div>
 
-      <!-- Section: Social Links -->
       <section class="mb-4">
         <h5>Connect with Me</h5>
         <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/Zubayrlatief" target="_blank">
@@ -146,16 +142,16 @@ export default {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.flag{
+.flag {
   height: 10vh;
 
 }
 
 a {
-  color: white; /* Default text color for the link */
+  color: white;
 }
 
 a:hover {
-  color: grey; /* Change color on hover */
+  color: grey;
 }
 </style>

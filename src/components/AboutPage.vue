@@ -1,45 +1,46 @@
 <template>
     <section id="about" class="about">
-      <div class="main">
-        <img src="https://zubayrlatief.github.io/hosted-images/myportfolioimg.jpg" alt="Profile Image" class="fade-in">
-        <div class="about-text">
-          <h1 class="fade-in" ><span class="dev">ZUBAYR ABDULLATIEF</span></h1>
-          <h5 class="fade-in"><span class="dev"> Aspiring Full stackDeveloper</span></h5>
-          <p class="fade-in">
-            Providingsolutions in the front and backend of your company.<br>
-            Entering the world of software is exciting<br>
-             Ammple of knowledge to gain and limitless ceilings to reach.<br>
-             Obsessed and PassionateI want to learn everything about it.<br>
-              Keeping disciplined and healthy is a must for me; I work out 5 times a week.<br>
-               I enjoy surfing and gaining knowledge in every aspect possible.
-          </p>
-          <button type="button" @click="scrollToFooter">Get in touch</button>
+        <div class="main">
+            <img src="https://zubayrlatief.github.io/hosted-images/myportfolioimg.jpg" alt="Profile Image"
+                class="fade-in">
+            <div class="about-text">
+                <h1 class="fade-in"><span class="dev">ZUBAYR ABDULLATIEF</span></h1>
+                <h5 class="fade-in"><span class="dev"> Aspiring Full stackDeveloper</span></h5>
+                <p class="fade-in">
+                    Providingsolutions in the front and backend of your company.<br>
+                    Entering the world of software is exciting<br>
+                    Ammple of knowledge to gain and limitless ceilings to reach.<br>
+                    Obsessed and PassionateI want to learn everything about it.<br>
+                    Keeping disciplined and healthy is a must for me; I work out 5 times a week.<br>
+                    I enjoy surfing and gaining knowledge in every aspect possible.
+                </p>
+                <button type="button" @click="scrollToFooter">Get in touch</button>
+            </div>
         </div>
-      </div>
     </section>
-  </template>
-  
-  <script>
-  export default {
+</template>
+
+<script>
+export default {
     methods: {
-      scrollToFooter() {
-        const footer = document.getElementById("footer");
-        if (footer) {
-          footer.scrollIntoView({ behavior: "smooth" });
+        scrollToFooter() {
+            const footer = document.getElementById("footer");
+            if (footer) {
+                footer.scrollIntoView({ behavior: "smooth" });
+            }
         }
-      }
     }
-  }
-  </script>
-  
-  <style scoped>
+}
+</script>
+
+<style scoped>
 .about {
     width: 100%;
     padding: 78px 0;
     background-color: black;
 }
 
-.dev{
+.dev {
     color: rgb(91, 85, 85);
     font-size: 1.5rem;
     text-transform: capitalize;
@@ -51,12 +52,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     width: 100%;
     margin: 0 auto;
 }
-
-/* Fade-in animation for the image */
 .fade-in {
     opacity: 0;
     animation: fadeIn 4s ease-in forwards;
@@ -66,6 +65,7 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -132,17 +132,16 @@ button:hover {
     border: 2px solid #f9004d;
 }
 
-/* Media Queries for iPhone 14 Pro Max and similar devices */
 
 @media (max-width: 430px) {
     .main {
-        flex-direction: row; /* Ensure side-by-side on small screens */
+        flex-direction: row;
         justify-content: space-between;
-        align-items: center; /* Vertically center the items */
+        align-items: center;
     }
 
     .about img {
-        max-width: 40%; /* Scale image size */
+        max-width: 40%;
         margin: 0 10px 0 0;
     }
 
@@ -152,7 +151,7 @@ button:hover {
     }
 
     .about-text h1 {
-        font-size: 1.8rem; /* Adjust text size */
+        font-size: 1.8rem;
     }
 
     .about-text h5 {
@@ -169,7 +168,6 @@ button:hover {
     }
 }
 
-/* Additional Media Queries for general responsiveness */
 
 @media (max-width: 768px) {
     .main {
@@ -206,7 +204,7 @@ button:hover {
     }
 
     .main {
-        flex-direction: column; /* Stack for small screens */
+        flex-direction: column;
         align-items: center;
     }
 
@@ -236,6 +234,4 @@ button:hover {
         padding: 10px 20px;
     }
 }
-
-  </style>
-  
+</style>

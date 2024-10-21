@@ -20,7 +20,6 @@ export default {
     };
   },
   mounted() {
-    // After 3.5 seconds, trigger the slide-up effect
     setTimeout(() => {
       this.isVisible = false;
     }, 3500);
@@ -28,9 +27,9 @@ export default {
 };
 </script>
 methods: {
-  redirectToCertificates() {
-    window.open('https://drive.google.com/file/d/18mLnKsP1FTXvYsCqfQTo3FbHUNt2YxQX/view?usp=sharing', '_blank');
-  }
+redirectToCertificates() {
+window.open('https://drive.google.com/file/d/18mLnKsP1FTXvYsCqfQTo3FbHUNt2YxQX/view?usp=sharing', '_blank');
+}
 }
 
 <!-- <div class="btn-container">
@@ -48,113 +47,114 @@ methods: {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black; /* Ensures full black background */
+  background-color: black;
   z-index: 9999;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .content-container {
   display: flex;
-  flex-direction: row; /* Make image and text side by side */
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* Add some space between the image and the text */
+  gap: 20px;
 }
 
 .heading-container {
-  text-align: left; /* Align the text to the left */
+  text-align: left;
   color: white;
   margin: 0 20px;
 }
 
 h1 {
-  font-size: 3rem; /* Base font size */
+  font-size: 3rem;
   margin: 0;
 }
 
 .animated-subheading {
-  font-size: 1.5rem; /* Base font size */
+  font-size: 1.5rem;
   margin-top: 10px;
-  overflow: hidden; /* Ensure the text stays within the bounds */
-  white-space: nowrap; /* Prevent text from wrapping */
-  border-right: 2px solid white; /* Creates a typing cursor effect */
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white;
   animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
 }
 
-/* Typing effect */
 @keyframes typing {
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
 }
 
-/* Blinking cursor effect */
 @keyframes blink-caret {
+
   from,
   to {
     border-color: transparent;
   }
+
   50% {
     border-color: white;
   }
 }
 
 .full-page-component img {
-  max-width: 40%; /* Adjust image width */
-  max-height: 60vh; /* Prevent the image from taking too much height */
-  object-fit: cover; /* Makes the image scale well within its container */
+  max-width: 40%;
+  max-height: 60vh;
+  object-fit: cover;
 }
 
-/* Responsive Styles */
+/* media */
 @media (max-width: 1024px) {
   h1 {
-    font-size: 2.5rem; /* Reduce font size for medium screens */
+    font-size: 2.5rem;
   }
 
   .animated-subheading {
-    font-size: 1.2rem; /* Reduce subheading font size */
+    font-size: 1.2rem;
   }
 
   .full-page-component img {
-    max-width: 50%; /* Adjust image width */
+    max-width: 50%;
   }
 }
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 2rem; /* Further reduce font size for smaller screens */
+    font-size: 2rem;
   }
 
   .animated-subheading {
-    font-size: 1rem; /* Further reduce subheading font size */
+    font-size: 1rem;
   }
 
   .content-container {
-    flex-direction: column; /* Stack image above text */
-    align-items: center; /* Center the content */
+    flex-direction: column;
+    align-items: center;
   }
 
   .full-page-component img {
-    max-width: 70%; /* Adjust image width */
-    max-height: 50vh; /* Adjust max height */
+    max-width: 70%;
+    max-height: 50vh;
   }
 }
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 1.5rem; /* Further reduce font size for mobile */
+    font-size: 1.5rem;
   }
 
   .animated-subheading {
-    font-size: 0.9rem; /* Further reduce subheading font size */
+    font-size: 0.9rem;
   }
 
   .full-page-component img {
-    max-width: 90%; /* Adjust image width for small screens */
-    max-height: 60vh; /* Adjust max height */
+    max-width: 90%;
+    max-height: 60vh;
     padding-bottom: 80%;
   }
 }

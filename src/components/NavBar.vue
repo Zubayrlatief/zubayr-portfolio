@@ -4,7 +4,8 @@
       <a class="navbar-brand" href="#">
         <img class="img" src="https://zubayrlatief.github.io/Images-/ZAlogo.png" alt="Logo">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -22,7 +23,7 @@
             <a class="nav-link" href="#home">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#footer">Contact</a> 
+            <a class="nav-link" href="#footer">Contact</a>
           </li>
         </ul>
       </div>

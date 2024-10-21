@@ -4,11 +4,7 @@
       <div class="wrapper">
         <div class="box-area">
           <div class="box">
-            <img
-              src="https://zubayrlatief.github.io/Images-/KC%20Auto.png"
-              alt=""
-              class="sr"
-            />
+            <img src="https://zubayrlatief.github.io/Images-/KC%20Auto.png" alt="" class="sr" />
             <div class="overlay">
               <h3>KC AUTO</h3>
               <h5>Jan 2021 - Aug 2021</h5>
@@ -19,11 +15,7 @@
             </div>
           </div>
           <div class="box">
-            <img
-              src="https://zubayrlatief.github.io/Images-/thecarbath.png"
-              alt=""
-              class="sr"
-            />
+            <img src="https://zubayrlatief.github.io/Images-/thecarbath.png" alt="" class="sr" />
             <div class="overlay">
               <h3>The Car Bath</h3>
               <h5>Apr 2022 - Dec 2022</h5>
@@ -34,11 +26,7 @@
             </div>
           </div>
           <div class="box">
-            <img
-              src="https://zubayrlatief.github.io/Images-/surf-emporium-crown.png"
-              alt=""
-              class="sr"
-            />
+            <img src="https://zubayrlatief.github.io/Images-/surf-emporium-crown.png" alt="" class="sr" />
             <div class="overlay">
               <h3>Surf Emporium</h3>
               <h5>Apr 2023 - present</h5>
@@ -46,15 +34,11 @@
                 Surf coach to tourists from all over the world making valuable
                 connections
               </p>
-              
+
             </div>
-            </div>
-              <div class="box">
-            <img
-              src="https://zubayrlatief.github.io/Images-/lcstudio.png"
-              alt=""
-              class="sr"
-            />
+          </div>
+          <div class="box">
+            <img src="https://zubayrlatief.github.io/Images-/lcstudio.png" alt="" class="sr" />
             <div class="overlay">
               <h3>Lc Studio</h3>
               <h5>Sep 2024 - present</h5>
@@ -83,30 +67,36 @@ export default {};
   font-family: poppins;
   padding: 1rem;
 }
+
 .wrapper {
   padding: 40px 10%;
 }
+
 #card {
   padding: 10px 10;
 }
+
 .box-area {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 40px;
   margin-top: 50px;
 }
+
 .box {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
 }
+
 .box img {
   width: 100%;
   border-radius: 10px;
   display: block;
   transition: transform 0.5s;
 }
+
 .overlay {
   width: 100%;
   height: 0;
@@ -125,6 +115,7 @@ export default {};
   font-size: 14px;
   transition: height 0.5s;
 }
+
 .overlay h3 {
   font-weight: 500;
   margin-bottom: 5px;
@@ -143,8 +134,8 @@ p {
 .box:hover img {
   transform: scale(1.1);
 }
+
 .box:hover .overlay {
   height: 100%;
 }
-
 </style>
