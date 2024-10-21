@@ -6,7 +6,7 @@
           <h1>Zubayr Abdullatief</h1>
           <h2 class="animated-subheading">Aspiring software developer</h2>
         </div>
-        <img loading="lazy" src="https://zubayrlatief.github.io/Images-/zubayrimage.jpg" alt="Disappearing Image" />
+        <img loading="lazy" src="https://zubayrlatief.github.io/Images-/SMILEEDIT.jpg" alt="Disappearing Image" />
       </div>
     </div>
   </Transition>

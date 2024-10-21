@@ -1,6 +1,7 @@
 <template>
   <div id="Education" class="heading">
-    <h2 class="section-title text-center">Education & Experience</h2>
+    <h2 class="section-title text-center">EDUCATION AND EXPERIENCE</h2>
+    <h4 class="subheading-title text-center">education i have competently completed and relevent Experience</h4>
     <div class="education-section">
       <div class="wrapper">
         <div class="box-area">
@@ -80,6 +81,15 @@ export default {
   font-size: 2.5rem;
   font-weight: 700;
   color: rgb(70, 68, 68);
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: poppins;
+}
+
+.subheading-title{
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: rgb(48, 46, 46);
   margin-bottom: 50px;
   text-align: center;
   font-family: poppins;

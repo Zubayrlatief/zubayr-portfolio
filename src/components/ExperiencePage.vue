@@ -46,6 +46,21 @@
                 Surf coach to tourists from all over the world making valuable
                 connections
               </p>
+              
+            </div>
+            </div>
+              <div class="box">
+            <img
+              src="https://zubayrlatief.github.io/Images-/lcstudio.png"
+              alt=""
+              class="sr"
+            />
+            <div class="overlay">
+              <h3>Lc Studio</h3>
+              <h5>Sep 2024 - present</h5>
+              <p>
+                Software development Intern with AWS basics
+              </p>
             </div>
           </div>
         </div>

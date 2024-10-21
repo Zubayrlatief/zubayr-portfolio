@@ -1,6 +1,7 @@
 <template>
   <div id="skills" class="heading">
-    <h2 class="section-title text-center">My Skills</h2>
+    <h2 class="section-title text-center">MY SKILLS</h2>
+    <h4 class="subheading-title text-center">software skills i activley use and display proficiency in</h4>
     <div class="skills-section">
       <div class="wrapper">
         <div class="box-area skills-area">
@@ -23,7 +24,8 @@
 
     <!-- Soft Skills Section -->
     <div id="soft-skills" class="heading">
-      <h2 class="section-title text-center">My Soft Skills</h2>
+      <h2 class="section-title text-center">MY SOFT SKILLS</h2>
+      <h4 class="subheading-title text-center">skills that mainly define me in the workspace</h4>
       <div class="wrapper soft-skills-wrapper">
         <div class="box-area soft-skills-area">
           <!-- Loop through the softSkillsData to display each soft skill -->
@@ -91,6 +93,15 @@ export default {
   font-weight: 700;
   color: rgb(70, 68, 68);
   padding-top: 2rem;
+  text-align: center;
+  font-family: poppins;
+}
+
+.subheading-title{
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: rgb(48, 46, 46);
+  margin-bottom: 50px;
   text-align: center;
   font-family: poppins;
 }

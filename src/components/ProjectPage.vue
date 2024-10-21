@@ -1,5 +1,7 @@
 <template>
   <section id="home">
+    <h2 class="section-title text-center">PROJECTS</h2>
+    <h4 class="subheading-title text-center">projects completed with different goals using scrum methadolegy</h4>
     <div class="slider">
       <div class="list">
         <div v-for="(item, index) in items" :key="index" class="item" :class="{ active: index === itemActive }">
@@ -115,6 +117,25 @@ export default {
 
 
 <style>
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(70, 68, 68);
+  padding-top: 2rem;
+  text-align: center;
+  font-family: poppins;
+}
+
+.subheading-title{
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: rgb(48, 46, 46);
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: poppins;
+}
+
 
 .slider{
     height: 82vh;
