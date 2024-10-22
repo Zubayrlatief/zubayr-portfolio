@@ -40,7 +40,7 @@ export default {
       items: [
         {
           image: "https://zubayrlatief.github.io/Images-/hermessfitness.png",
-          title: "Hermess Fitness",
+          title: "Fullstack Hermess Fitness",
           subtitle: "Vue.js",
           github: "https://github.com/Zubayrlatief/capstone.git",
           live: "https://capstone-965d2.web.app/",
@@ -48,20 +48,20 @@ export default {
         {
           image: "https://zubayrlatief.github.io/capestone-hosted-images/regalredifiend.png ",
           title: "Regal Redifiend",
-          subtitle: "Javascript",
+          subtitle: " First Javascript Project",
           github: "https://github.com/Zubayrlatief/Regal-Redifiend-Javascript-EOMP.git",
           live: "https://javascript-eomp-2.vercel.app/",
         },
         {
           image: "https://zubayrlatief.github.io/Images-/ZMpetshop.png",
-          title: "Zubayr and Mapule Pet Shop",
+          title: "Partner Fullstack Project Zubayr and Mapule Pet Shop",
           subtitle: "Vue.js",
           github: "https://github.com/Zubayrlatief/node-eomp.git",
           live: "https://node-eomp.vercel.app/",
         },
         {
           image: "https://zubayrlatief.github.io/Images-/weather.io.png",
-          title: "Weather.io",
+          title: "Weather Api project",
           subtitle: "Vue.js",
           github: "https://github.com/Zubayrlatief/Weather-io.git",
           live: "https://weather-io-wine.vercel.app/",
