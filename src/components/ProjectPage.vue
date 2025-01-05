@@ -40,12 +40,17 @@ export default {
       items: [
         {
           image: "https://zubayrlatief.github.io/Images-/hermessfitness.png",
+<<<<<<< HEAD
           title: "Hermess Fitness | Backend project",
+=======
+          title: "Fullstack Hermess Fitness",
+>>>>>>> e6d26665a321ca5f458219d184c6ba27b63bd832
           subtitle: "Vue.js",
           github: "https://github.com/Zubayrlatief/capstone.git",
           live: "https://capstone-965d2.web.app/",
         },
         {
+<<<<<<< HEAD
           image: "https://zubayrlatief.github.io/Images-/alphatower.png",
           title: "Alpha Tower | Website for bussiness",
           subtitle: "Wordpress",
@@ -55,13 +60,29 @@ export default {
         {
           image: "https://zubayrlatief.github.io/Images-/trsecurityk9.png",
           title: "TR Security K9 | Website for business",
+=======
+          image: "https://zubayrlatief.github.io/capestone-hosted-images/regalredifiend.png ",
+          title: "Regal Redifiend",
+          subtitle: " First Javascript Project",
+          github: "https://github.com/Zubayrlatief/Regal-Redifiend-Javascript-EOMP.git",
+          live: "https://javascript-eomp-2.vercel.app/",
+        },
+        {
+          image: "https://zubayrlatief.github.io/Images-/ZMpetshop.png",
+          title: "Partner Fullstack Project Zubayr and Mapule Pet Shop",
+>>>>>>> e6d26665a321ca5f458219d184c6ba27b63bd832
           subtitle: "Vue.js",
           github: "https://github.com/Zubayrlatief/trsecurityk9.git",
           live: "https://trsecurityk9.vercel.app/",
         },
         {
+<<<<<<< HEAD
           image: "https://zubayrlatief.github.io/Images-/zarlogistic.png",
           title: "ZAR Logistics | Backend project",
+=======
+          image: "https://zubayrlatief.github.io/Images-/weather.io.png",
+          title: "Weather Api project",
+>>>>>>> e6d26665a321ca5f458219d184c6ba27b63bd832
           subtitle: "Vue.js",
           github: "https://github.com/Zubayrlatief/logistics.git",
           live: "https://logistics-hazel.vercel.app/",
