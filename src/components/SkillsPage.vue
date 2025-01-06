@@ -180,25 +180,7 @@ p {
 }
 
 /* media lol */
-@media (max-width: 1024px) {
-  .skills-area {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-  }
 
-  .wrapper {
-    padding: 10px 5%;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .box {
-    width: 180px;
-    height: 220px;
-  }
-}
 
 @media (max-width: 768px) {
   .skills-area {
@@ -223,21 +205,105 @@ p {
     font-size: 1.6rem;
   }
 }
+/* Existing styles remain unchanged */
 
-@media (max-width: 480px) {
+/* Center boxes on smaller screens */
+
+@media (max-width: 768px) {
+  .skills-area {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    justify-items: center; /* Center the items horizontally */
+  }
+
+  .wrapper {
+    padding: 10px 5%;
+    display: flex;
+    justify-content: center; /* Center wrapper content */
+  }
+
+  .box {
+    width: 150px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content inside the box */
+  }
+
+  .overlay h3 {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* Existing styles remain unchanged */
+
+/* Center boxes on smaller screens */
+
+
+@media (max-width: 768px) {
+  .skills-area {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    justify-content: center; /* Center the grid items */
+  }
+
+  .wrapper {
+    padding: 10px 5%;
+    display: flex;
+    justify-content: center; /* Center wrapper content */
+    width: 100%;
+  }
+
+  .box-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center; /* Center the individual items inside the grid */
+    width: 100%;
+  }
+
+  .box {
+    width: 150px;
+    height: 200px;
+    margin: 0 auto; /* Center the box */
+  }
+
+  .overlay h3 {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 500px) {
   .skills-area {
     grid-template-columns: 1fr;
     grid-gap: 15px;
+    justify-content: center; /* Center the grid items */
   }
 
   .soft-skills-area {
     flex-direction: column;
     gap: 15px;
+    align-items: center; /* Center soft skills */
+  }
+
+  .box-area {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center; /* Center the individual items inside the grid */
+    width: 100%;
   }
 
   .box {
-    width: 90px;
-    height: 150px;
+    width: 150px;
+    height: 160px;
+    margin: 0 auto; /* Center the box */
   }
 
   .section-title {
@@ -248,4 +314,6 @@ p {
     font-size: 14px;
   }
 }
+
+
 </style>
