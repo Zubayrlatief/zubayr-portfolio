@@ -233,8 +233,8 @@ p {
   }
 
   .box {
-    width: 120px;
-    height: 180px;
+    width: 90px;
+    height: 150px;
   }
 
   .section-title {

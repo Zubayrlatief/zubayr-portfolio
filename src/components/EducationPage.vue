@@ -208,4 +208,25 @@ p {
   height: 32px;
   margin-right: 10px;
 }
+@media (max-width: 480px) {
+  .box {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  transition: transform 0.3s ease;
+  flex: 1 1 calc(40% - 40px);
+  max-width: calc(40% - 40px);
+}
+}
+@media (max-width: 600px) {
+  .box {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  transition: transform 0.3s ease;
+  flex: 1 1 calc(50% - 40px);
+  max-width: calc(50% - 40px);
+}}
 </style>
