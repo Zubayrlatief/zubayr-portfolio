@@ -1,13 +1,19 @@
 <template>
   <div id="Education" class="heading">
     <h2 class="section-title text-center">EDUCATION AND EXPERIENCE</h2>
-    <h4 class="subheading-title text-center">education i have competently completed and relevent Experience</h4>
+    <h4 class="subheading-title text-center">
+      Education I have competently completed and relevant experience
+    </h4>
     <div class="education-section">
       <div class="wrapper">
         <div class="box-area">
           <div class="box" v-for="education in educationData" :key="education.institution">
-            <img :src="education.image" :alt="education.institution" class="sr"
-              style="width: 100%; height: auto; border-radius: 10px" />
+            <img
+              :src="education.image"
+              :alt="education.institution"
+              class="sr"
+              style="width: 100%; height: auto; border-radius: 10px"
+            />
             <div class="overlay">
               <h3>{{ education.degree }}</h3>
               <h5>{{ education.institution }}</h5>
@@ -19,13 +25,14 @@
     </div>
     <div class="btn-container">
       <button class="btn" @click="redirectToCertificates">
-        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/aws.png" alt="AWS Logo"
-          class="btn-image" />
+        <img
+          src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/aws.png"
+          alt="AWS Logo"
+          class="btn-image"
+        />
         <span>View Certificates</span>
       </button>
     </div>
-
-
   </div>
 </template>
 
@@ -47,14 +54,24 @@ export default {
           image:
             "https://zubayrlatief.github.io/capestone-hosted-images/lifechoices.png",
         },
+        {
+          degree: "B-com Information systems",
+          institution: "Mancosa",
+          year: "2024-2027",
+          image:
+            "https://zubayrlatief.github.io/Images-/MANCOSA.jpg",
+        },
       ],
     };
   },
   methods: {
     redirectToCertificates() {
-      window.open('https://drive.google.com/file/d/18mLnKsP1FTXvYsCqfQTo3FbHUNt2YxQX/view?usp=sharing', '_blank');
-    }
-  }
+      window.open(
+        "https://drive.google.com/file/d/18mLnKsP1FTXvYsCqfQTo3FbHUNt2YxQX/view?usp=sharing",
+        "_blank"
+      );
+    },
+  },
 };
 </script>
 
@@ -94,23 +111,10 @@ export default {
 }
 
 .box-area {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 40px;
-  margin-top: 10px;
-}
-
-@media (max-width: 768px) {
-  .box-area {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .box {
-    margin: 10px;
-    flex: 1 1 calc(33.33% - 20px);
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
 }
 
 .box {
@@ -119,7 +123,8 @@ export default {
   overflow: hidden;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
   transition: transform 0.3s ease;
-  padding: 5rem;
+  flex: 1 1 calc(30% - 40px);
+  max-width: calc(30% - 40px);
 }
 
 .overlay {
@@ -146,7 +151,7 @@ export default {
   margin-bottom: 5px;
   margin-top: 80%;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   letter-spacing: 2px;
   color: aliceblue;
 }
@@ -164,57 +169,10 @@ p {
   height: 100%;
 }
 
-@media (max-width: 1024px) {
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .box {
-    padding: 4rem;
-  }
-
-  .wrapper {
-    padding: 30px 5%;
-  }
-}
-
 @media (max-width: 768px) {
-  .section-title {
-    font-size: 1.8rem;
-  }
-
   .box {
-    padding: 3rem;
-  }
-
-  .wrapper {
-    padding: 20px 5%;
-  }
-
-  .overlay h3 {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .section-title {
-    font-size: 1.5rem;
-  }
-
-  .box {
-    padding: 2rem;
-  }
-
-  .wrapper {
-    padding: 10px 5%;
-  }
-
-  .overlay h3 {
-    font-size: 20px;
-  }
-
-  .overlay {
-    padding: 0 20px;
+    flex: 1 1 calc(100% - 20px);
+    max-width: calc(100% - 20px);
   }
 }
 
@@ -249,54 +207,5 @@ p {
   width: 32px;
   height: 32px;
   margin-right: 10px;
-}
-
-.inner-button {
-  padding: 0.4em 1em;
-  background-color: var(--color);
-  color: rgb(88, 78, 78);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  text-transform: uppercase;
-  margin-left: 10px;
-}
-
-.btn {
-  padding: 2em;
-  flex-direction: column;
-  align-items: center;
-}
-
-.inner-button:hover {
-
-  background-color: var(--color2);
-}
-
-
-
-.btn::before {
-  margin: 2em;
-  top: -50%;
-  left: -25%;
-  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
-}
-
-.btn:hover::before {
-  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
-}
-
-.btn:hover::after {
-  transform: skew(45deg) translate(-50%, -50%);
-}
-
-.btn:hover {
-  color: var(--color2);
-}
-
-.btn:active {
-  filter: brightness(0.7);
-  transform: scale(0.98);
 }
 </style>

@@ -47,13 +47,13 @@
                 d="M22 16.92V21a1 1 0 0 1-1 1h-4.08a1 1 0 0 1-.92-.65l-1.74-5.21a1 1 0 0 1 .16-1.05l2.57-2.57a1 1 0 0 1 1.07-.23l3.92 1.96a1 1 0 0 1 .61 1.12zM2 4a1 1 0 0 1 1-1h4.08a1 1 0 0 1 .92.65l1.74 5.21a1 1 0 0 1-.16 1.05l-2.57 2.57a1 1 0 0 1-1.07.23l-3.92-1.96a1 1 0 0 1-.61-1.12z">
               </path>
             </svg>
-            067 507 0088
+            068 507 0088
           </h2>
           <h3>
             <a href="mailto:zubayrlatie007@gmail.com">
               <i class="bi bi-envelope-fill"></i>
             </a>
-            zubayrlatie007@gmail.com
+            business.zubayr@gmail.com
           </h3>
         </div>
       </div>
