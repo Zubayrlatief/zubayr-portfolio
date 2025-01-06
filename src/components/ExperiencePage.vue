@@ -138,5 +138,17 @@ p {
 .box:hover .overlay {
   height: 100%;
 }
+@media (max-width: 480px) {
+  .box {
+    text-align: center; /* Centers the image horizontally */
+  }
+
+  .box img {
+    width: 70%;
+    border-radius: 10px;
+    transition: transform 0.5s;
+    display: inline-block; /* Ensures proper centering within text-align */
+  }
+}
 
 </style>

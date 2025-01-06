@@ -138,7 +138,7 @@ h1 {
   }
 
   .full-page-component img {
-    max-width: 70%;
+    max-width: 40%;
     max-height: 50vh;
   }
 }
@@ -164,6 +164,3 @@ h1 {
   opacity: 0;
 }
 </style>
-
-
-<!-- https://zubayrlatief.github.io/hosted-images/myportfolioimg.jpg -->
