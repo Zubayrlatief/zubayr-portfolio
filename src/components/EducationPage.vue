@@ -208,18 +208,22 @@ p {
   height: 32px;
   margin-right: 10px;
 }
-@media (max-width: 480px) {
-  .box {
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-  transition: transform 0.3s ease;
-  flex: 1 1 calc(40% - 40px);
-  max-width: calc(40% - 40px);
-}
-}
+
+
+
+
 @media (max-width: 600px) {
+  .overlay h3 {
+    font-size: 20px; /* Smaller font size for h3 */
+  }
+
+  .overlay h5 {
+    font-size: 14px; /* Smaller font size for h5 */
+  }
+
+  .overlay p {
+    font-size: 10px; /* Smaller font size for p */
+  }
   .box {
   border-radius: 10px;
   position: relative;
@@ -228,5 +232,9 @@ p {
   transition: transform 0.3s ease;
   flex: 1 1 calc(50% - 40px);
   max-width: calc(50% - 40px);
-}}
+}
+}
+
+
+
 </style>
