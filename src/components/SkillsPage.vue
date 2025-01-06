@@ -69,11 +69,14 @@ export default {
 
 <style scoped>
 .heading {
+  padding-top: 5rem;
   background-color: rgb(0, 0, 0);
 }
 
 .skills-section,
 .soft-skills-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   background-color: #000000;
   padding: 10px 0;
   width: 100%;

@@ -78,7 +78,7 @@ export default {
 <style scoped>
 .heading {
   background-color: rgb(0, 0, 0);
-  padding-top: 2rem;
+  padding-top: 5rem;
 }
 
 .education-section {
