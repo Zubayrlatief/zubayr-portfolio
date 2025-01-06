@@ -121,7 +121,7 @@ export default {};
   margin-bottom: 5px;
   margin-top: 80%;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 30px;
+  font-size: 15px;
   letter-spacing: 2px;
   color: aliceblue;
 }
