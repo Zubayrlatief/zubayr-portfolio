@@ -367,4 +367,109 @@ export default {
     transform: translateY(0) scale(1);
   }
 }
+/* General responsive design for tablets */
+/* General responsive design for tablets */
+@media screen and (max-width: 1024px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .subheading-title {
+    font-size: 1.2rem;
+  }
+
+  .slider {
+    height: 100vh;
+  }
+
+  .slider .list .item .content h2 {
+    font-size: 80px;
+  }
+
+  .thumbnail {
+    height: 200px;
+  }
+
+  .thumbnail .box {
+    width: 150px;
+    height: 180px;
+  }
+
+  .arrows {
+    right: 30px;
+  }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 678px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .subheading-title {
+    font-size: 1rem;
+  }
+
+  .slider {
+    height: 80vh;
+  }
+
+  .slider .list .item .content h2 {
+    font-size: 50px;
+  }
+
+  .arrows {
+    top: 5%;
+  }
+
+  .thumbnail {
+    height: 150px;
+    justify-content: start;
+  }
+
+  .thumbnail .box {
+    width: 120px;
+    height: 150px;
+  }
+
+  .thumbnail .overlay {
+    padding: 5px;
+  }
+
+  .thumbnail .buttons {
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .thumbnail .button-1,
+  .thumbnail .button-2 {
+    font-size: 0.8rem;
+    padding: 3px 7px;
+  }
+}
+
+/* Small mobile screens */
+@media screen and (max-width: 480px) {
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .subheading-title {
+    font-size: 0.9rem;
+  }
+
+  .slider .list .item img {
+    object-fit: cover;
+  }
+
+  .thumbnail .box {
+    width: 100px;
+    height: 120px;
+  }
+
+  .arrows {
+    display: none; /* Hides arrows for small screens */
+  }
+}
+
 </style>
