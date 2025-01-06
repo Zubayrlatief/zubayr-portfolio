@@ -450,26 +450,56 @@ export default {
 
 /* Small mobile screens */
 @media screen and (max-width: 480px) {
-  .section-title {
-    font-size: 1.2rem;
-  }
-
-  .subheading-title {
-    font-size: 0.9rem;
+  .slider {
+    height: 50vh; /* Reduce slider height for smaller screens */
   }
 
   .slider .list .item img {
     object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+  p{
+
+    font-size: 10px;
+  }
+
+  .slider .list .item .content {
+    left: 5%;
+    top: 5%;
+    padding: 10px;
+  }
+
+  .slider .list .item .content h2 {
+    font-size: 2rem; /* Smaller heading size */
+    line-height: 1.2;
+  }
+
+  .slider .list .item .content p {
+    font-size: 1rem; /* Smaller text size */
+  }
+
+  .thumbnail {
+    height: 100px; /* Reduce thumbnail height */
+    padding: 5px 10px;
   }
 
   .thumbnail .box {
-    width: 100px;
-    height: 120px;
+    width: 90px;
+    height: 100px; /* Smaller thumbnails */
+  }
+
+  .thumbnail .overlay {
+    padding: 5px;
+    font-size: 0.9rem; /* Smaller overlay text */
   }
 
   .arrows {
-    display: none; /* Hides arrows for small screens */
+    top: 20%;
+    right: 5px;
+    font-size: 1.5rem; /* Smaller arrow size */
   }
 }
+
 
 </style>
