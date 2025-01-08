@@ -9,7 +9,7 @@
               <h3>KC AUTO</h3>
               <h5>Jan 2021 - Aug 2021</h5>
               <p>
-                Started woeking in a mechanic shop in grade 9 to help my mother
+                Started working in a mechanic shop in 9'th grade to help my mother
                 financially
               </p>
             </div>
@@ -20,7 +20,7 @@
               <h3>The Car Bath</h3>
               <h5>Apr 2022 - Dec 2022</h5>
               <p>
-                Saw a gap in the market and opened my own Car Wash company
+                Saw a gap in the market and opened my own Car Wash company.
                 Learnt valuable sales and marketing skills
               </p>
             </div>
