@@ -214,15 +214,15 @@ p {
 
 @media (max-width: 600px) {
   .overlay h3 {
-    font-size: 20px; /* Smaller font size for h3 */
+    font-size: 10px; /* Smaller font size for h3 */
   }
 
   .overlay h5 {
-    font-size: 14px; /* Smaller font size for h5 */
+    font-size: 10px; /* Smaller font size for h5 */
   }
 
   .overlay p {
-    font-size: 10px; /* Smaller font size for p */
+    font-size: 6px; /* Smaller font size for p */
   }
   .box {
   border-radius: 10px;
@@ -234,6 +234,20 @@ p {
   max-width: calc(50% - 40px);
 }
 }
+
+
+@media (max-width: 1024px) {
+  .overlay h3 {
+    font-size: 16px; /* Smaller font size for h3 */
+  }
+
+  .overlay h5 {
+    font-size: 12px; /* Smaller font size for h5 */
+  }
+
+  .overlay p {
+    font-size: 8px; /* Smaller font size for p */
+  }}
 
 
 

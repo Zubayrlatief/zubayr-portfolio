@@ -7,12 +7,12 @@
                 <h1 class="fade-in"><span class="dev">ZUBAYR ABDULLATIEF</span></h1>
                 <h5 class="fade-in"><span class="dev"> Aspiring Full stackDeveloper</span></h5>
                 <p class="fade-in">
-                    Providingsolutions in the front and backend of your company.<br>
-                    Entering the world of software is exciting<br>
-                    Ammple of knowledge to gain and limitless ceilings to reach.<br>
-                    Obsessed and PassionateI want to learn everything about it.<br>
-                    Keeping disciplined and healthy is a must for me; I work out 5 times a week.<br>
-                    I enjoy surfing and gaining knowledge in every aspect possible.
+                    Providingsolutions in the front and backend of your company.
+                    Entering the world of software is exciting
+                    Ammple of knowledge to gain and limitless ceilings to reach.
+                    Obsessed and Passionate I want to learn everything about it.
+                    Keeping disciplined and healthy is a must for me I work out 5 times a week
+                     having a love for surfing and gaining knowledge in every aspect possible.
                 </p>
                 <button type="button" @click="scrollToFooter">Get in touch</button>
             </div>
@@ -133,7 +133,7 @@ button:hover {
 }
 
 
-@media (max-width: 430px) {
+@media (max-width: 480px) {
     .main {
         flex-direction: row;
         justify-content: space-between;
@@ -146,7 +146,7 @@ button:hover {
     }
 
     .about-text {
-        max-width: 55%;
+        max-width: 95%;
         text-align: left;
     }
 
@@ -160,6 +160,39 @@ button:hover {
 
     .about-text p {
         font-size: 0.85rem;
+    }
+
+    button {
+        font-size: 0.85rem;
+        padding: 10px 25px;
+    }
+}
+@media (max-width: 480px) {
+    .main {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .about img {
+        max-width: 50%;
+        margin: 0 10px 0 0;
+    }
+
+    .about-text {
+        max-width: 95%;
+    }
+
+    .about-text h1 {
+        font-size: 2rem;
+    }
+
+    .about-text h5 {
+        font-size: 1.2rem;
+    }
+
+    .about-text p {
+        font-size: 0.6rem;
     }
 
     button {
