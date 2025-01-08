@@ -57,7 +57,7 @@ export default {
         {
           degree: "B-com Information systems",
           institution: "Mancosa",
-          year: "2024-2027",
+          year: "2025-2027",
           image:
             "https://zubayrlatief.github.io/Images-/MANCOSA.jpg",
         },
