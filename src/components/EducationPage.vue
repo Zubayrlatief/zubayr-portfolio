@@ -51,15 +51,13 @@ export default {
           degree: "Academy",
           institution: "Life Choices",
           year: "2024-2024",
-          image:
-            "https://zubayrlatief.github.io/capestone-hosted-images/lifechoices.png",
+          image: "https://zubayrlatief.github.io/capestone-hosted-images/lifechoices.png",
         },
         {
           degree: "B-com Information systems",
           institution: "Mancosa",
           year: "2025-2027",
-          image:
-            "https://zubayrlatief.github.io/Images-/MANCOSA.jpg",
+          image: "https://zubayrlatief.github.io/Images-/MANCOSA.jpg",
         },
       ],
     };
@@ -209,46 +207,35 @@ p {
   margin-right: 10px;
 }
 
-
-
-
 @media (max-width: 600px) {
   .overlay h3 {
-    font-size: 10px; /* Smaller font size for h3 */
+    font-size: 10px;
   }
 
   .overlay h5 {
-    font-size: 10px; /* Smaller font size for h5 */
+    font-size: 10px;
   }
 
   .overlay p {
-    font-size: 6px; /* Smaller font size for p */
+    font-size: 6px;
   }
   .box {
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-  transition: transform 0.3s ease;
-  flex: 1 1 calc(50% - 40px);
-  max-width: calc(50% - 40px);
+    flex: 1 1 calc(50% - 40px);
+    max-width: calc(50% - 40px);
+  }
 }
-}
-
 
 @media (max-width: 1024px) {
   .overlay h3 {
-    font-size: 16px; /* Smaller font size for h3 */
+    font-size: 16px;
   }
 
   .overlay h5 {
-    font-size: 12px; /* Smaller font size for h5 */
+    font-size: 12px;
   }
 
   .overlay p {
-    font-size: 8px; /* Smaller font size for p */
-  }}
-
-
-
+    font-size: 8px;
+  }
+}
 </style>
