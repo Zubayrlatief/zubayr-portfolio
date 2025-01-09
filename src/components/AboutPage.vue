@@ -66,6 +66,10 @@ export default {
   background-color: black;
 }
 
+p{
+ color: rgb(255, 255, 255);
+}
+
 .dev {
   color: rgb(91, 85, 85);
   font-size: 1.5rem;
@@ -128,7 +132,8 @@ export default {
 
 .about-text h1 {
   color: white;
-  font-size: 1.5rem;
+  font-weight: bolder;
+  font-size: 2rem;
   text-transform: capitalize;
   margin-bottom: 20px;
 }
@@ -142,7 +147,7 @@ export default {
 }
 
 span {
-  color: antiquewhite;
+  color: rgb(253, 253, 253);
 }
 
 .about-text p {
@@ -175,13 +180,14 @@ button:hover {
   }
 
   .about img {
-    max-width: 70%;
+    max-width: 80%;
     margin: 0 10px 0 0;
     align-items: center;
   }
 
   .about-text {
     max-width: 95%;
+    margin-top: 10%
     
   }
 
@@ -190,11 +196,13 @@ button:hover {
   }
 
   .about-text h5 {
-    font-size: 1.2rem;
+    font-size: 0.2rem;
   }
 
   .about-text p {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    margin: 0.8rem;
+    margin-bottom: 2rem;
   }
 
   button {

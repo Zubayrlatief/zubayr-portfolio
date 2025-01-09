@@ -7,7 +7,7 @@
     <div class="education-section">
       <div class="wrapper">
         <div class="box-area">
-          <div class="box" v-for="education in educationData" :key="education.institution">
+          <div class="box hidden" v-for="education in educationData" :key="education.institution">
             <img
               :src="education.image"
               :alt="education.institution"
@@ -37,6 +37,8 @@
 </template>
 
 <script>
+import { onMounted, onBeforeUnmount } from 'vue';
+
 export default {
   data() {
     return {
@@ -70,13 +72,38 @@ export default {
       );
     },
   },
+  setup() {
+    let observer = null;
+
+    onMounted(() => {
+      observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+            } else {
+              entry.target.classList.remove('show');
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      const hiddenElements = document.querySelectorAll('.hidden');
+      hiddenElements.forEach((el) => observer.observe(el));
+    });
+
+    onBeforeUnmount(() => {
+      if (observer) observer.disconnect();
+    });
+  }
 };
 </script>
 
 <style scoped>
 .heading {
   background-color: rgb(0, 0, 0);
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
 
 .education-section {
@@ -167,6 +194,17 @@ p {
   height: 100%;
 }
 
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.hidden.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (max-width: 768px) {
   .box {
     flex: 1 1 calc(100% - 20px);
@@ -218,24 +256,6 @@ p {
 
   .overlay p {
     font-size: 6px;
-  }
-  .box {
-    flex: 1 1 calc(50% - 40px);
-    max-width: calc(50% - 40px);
-  }
-}
-
-@media (max-width: 1024px) {
-  .overlay h3 {
-    font-size: 16px;
-  }
-
-  .overlay h5 {
-    font-size: 12px;
-  }
-
-  .overlay p {
-    font-size: 8px;
   }
 }
 </style>

@@ -1,11 +1,10 @@
 <template>
   <div id="skills" class="heading">
     <h2 class="section-title text-center">MY SKILLS</h2>
-    <h4 class="subheading-title text-center">software skills i activley use and display proficiency in</h4>
+    <h4 class="subheading-title text-center">software skills i actively use and display proficiency in</h4>
     <div class="skills-section">
       <div class="wrapper">
         <div class="box-area skills-area">
-
           <div class="box" v-for="skill in skillsData" :key="skill.name">
             <img :src="skill.github" :alt="skill.name" class="sr"
               style="width: 100%; height: auto; border-radius: 10px;" />
@@ -18,12 +17,11 @@
       </div>
     </div>
 
-    <div id="soft-skills" class="heading">
+    <div id="softW-skills" class="heading">
       <h2 class="section-title text-center">MY SOFT SKILLS</h2>
       <h4 class="subheading-title text-center">skills that mainly define me in the workspace</h4>
       <div class="wrapper soft-skills-wrapper">
         <div class="box-area soft-skills-area">
-
           <div class="box" v-for="softSkill in softSkillsData" :key="softSkill.title">
             <img :src="softSkill.url" :alt="softSkill.title" class="sr"
               style="width: 100%; height: auto; border-radius: 10px;" />
@@ -130,7 +128,7 @@ export default {
   position: relative;
   overflow: hidden;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 0.5rem;
   width: 200px;
   height: 250px;
@@ -172,103 +170,32 @@ p {
 }
 
 .box:hover img {
-  transform: scale(1.02);
+  transform: scale(1.1); /* Scale up the image slightly */
 }
 
 .box:hover .overlay {
   height: 100%;
 }
 
-/* media lol */
-
-
-@media (max-width: 768px) {
-  .skills-area {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-  }
-
-  .wrapper {
-    padding: 10px 5%;
-  }
-
-  .box {
-    width: 150px;
-    height: 200px;
-  }
-
-  .overlay h3 {
-    font-size: 16px;
-  }
-
-  .section-title {
-    font-size: 1.6rem;
-  }
-}
-/* Existing styles remain unchanged */
-
-/* Center boxes on smaller screens */
-
-@media (max-width: 768px) {
-  .skills-area {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    justify-items: center; /* Center the items horizontally */
-  }
-
-  .wrapper {
-    padding: 10px 5%;
-    display: flex;
-    justify-content: center; /* Center wrapper content */
-  }
-
-  .box {
-    width: 150px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Center content inside the box */
-  }
-
-  .overlay h3 {
-    font-size: 16px;
-  }
-
-  .section-title {
-    font-size: 1.6rem;
-  }
+.box:hover {
+  transform: scale(1.05); /* Add a small scale transformation for the box */
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5); /* Add a shadow on hover */
 }
 
-/* Existing styles remain unchanged */
-
-/* Center boxes on smaller screens */
-
-
+/* Media queries for responsiveness */
 @media (max-width: 768px) {
   .skills-area {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
-    justify-content: center; /* Center the grid items */
   }
 
   .wrapper {
     padding: 10px 5%;
-    display: flex;
-    justify-content: center; /* Center wrapper content */
-    width: 100%;
-  }
-
-  .box-area {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center; /* Center the individual items inside the grid */
-    width: 100%;
   }
 
   .box {
     width: 150px;
     height: 200px;
-    margin: 0 auto; /* Center the box */
   }
 
   .overlay h3 {
@@ -284,36 +211,19 @@ p {
   .skills-area {
     grid-template-columns: 1fr;
     grid-gap: 15px;
-    justify-content: center; /* Center the grid items */
+    justify-content: center;
   }
 
   .soft-skills-area {
     flex-direction: column;
     gap: 15px;
-    align-items: center; /* Center soft skills */
+    align-items: center;
   }
 
   .box-area {
     display: grid;
     grid-template-columns: 1fr;
-    justify-items: center; /* Center the individual items inside the grid */
-    width: 100%;
-  }
-
-  .box {
-    width: 150px;
-    height: 160px;
-    margin: 0 auto; /* Center the box */
-  }
-
-  .section-title {
-    font-size: 1.4rem;
-  }
-
-  .overlay h3 {
-    font-size: 14px;
+    justify-items: center;
   }
 }
-
-
 </style>
