@@ -151,10 +151,9 @@ span {
 }
 
 .about-text p {
-  color: bisque;
-  letter-spacing: 2px;
+  color: rgb(78, 72, 72);
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 45px;
 }
 
