@@ -45,7 +45,7 @@ export default {
           degree: "NSC Bachelor",
           institution: "Claremont High School",
           year: "2019-2023",
-          image: "https://zubayrlatief.github.io/Images-/claremontcorrect.png",
+          image: "https://zubayrlatief.github.io/Images-/chslogocorrect.png",
         },
         {
           degree: "Academy",
