@@ -39,7 +39,7 @@ export default {
     return {
       items: [
         {
-          image: "https://zubayrlatief.github.io/Images-/hermessfitness.png",
+          image: "https://zubayrlatief.github.io/Images-/hermessfitnessfinal.png",
           title: "Hermess Fitness | Backend project",
           subtitle: "Vue.js",
           github: "https://github.com/Zubayrlatief/capstone.git",
