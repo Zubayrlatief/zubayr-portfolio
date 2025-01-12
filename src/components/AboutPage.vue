@@ -1,17 +1,31 @@
 <template>
   <section id="about" class="about">
     <div class="main">
-      <img src="https://zubayrlatief.github.io/hosted-images/myportfolioimg.jpg" alt="Profile Image" class="fade-in hidden">
-      <div class="about-text hidden">
+      <div class="card">
+        <div class="front">
+          <img
+            src="https://zubayrlatief.github.io/hosted-images/myportfolioimg.jpg"
+            alt="Profile Image"
+            class="fade-in hidden"
+          />
+        </div>
+        <div class="back">
+          <div class="social-links">
+            <a href="#" class="social-icon">Instagram</a>
+            <a href="#" class="social-icon">TikTok</a>
+          </div>
+        </div>
+      </div>
+      <div class="about-text">
         <h1><span class="dev">ZUBAYR ABDULLATIEF</span></h1>
         <h5><span class="dev">Aspiring Full Stack Developer</span></h5>
         <p>
-          Providing solutions in the front and backend of your company.  
-          Entering the world of software is exciting.  
-          Ample knowledge to gain and limitless ceilings to reach.  
-          Obsessed and passionate, I want to learn everything about it.  
-          Keeping disciplined and healthy is a must for me; I work out 5 times a week,  
-          having a love for surfing and gaining knowledge in every aspect possible.
+          Providing solutions in the front and backend of your company.
+          Entering the world of software is exciting. Ample knowledge to gain
+          and limitless ceilings to reach. Obsessed and passionate, I want to
+          learn everything about it. Keeping disciplined and healthy is a must
+          for me; I work out 5 times a week, having a love for surfing and
+          gaining knowledge in every aspect possible.
         </p>
         <button type="button" @click="scrollToFooter">Get in touch</button>
       </div>
@@ -21,7 +35,6 @@
 
 <script>
 import { onMounted, onBeforeUnmount } from 'vue';
-
 export default {
   methods: {
     scrollToFooter() {
@@ -29,11 +42,10 @@ export default {
       if (footer) {
         footer.scrollIntoView({ behavior: "smooth" });
       }
-    }
+    },
   },
   setup() {
     let observer = null;
-
     onMounted(() => {
       observer = new IntersectionObserver(
         (entries) => {
@@ -47,7 +59,6 @@ export default {
         },
         { threshold: 0.2 }
       );
-
       const hiddenElements = document.querySelectorAll('.hidden');
       hiddenElements.forEach((el) => observer.observe(el));
     });
@@ -55,19 +66,19 @@ export default {
     onBeforeUnmount(() => {
       if (observer) observer.disconnect();
     });
-  }
+  },
 };
 </script>
 
 <style scoped>
 .about {
   width: 100%;
-  padding: 78px 0;
+  padding: 50px 0;
   background-color: black;
 }
 
-p{
- color: rgb(255, 255, 255);
+p {
+  color: rgb(255, 255, 255);
 }
 
 .dev {
@@ -80,9 +91,9 @@ p{
 
 .main {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
   width: 100%;
   margin: 0 auto;
 }
@@ -112,22 +123,75 @@ p{
   }
 }
 
-.about img {
-  height: auto;
+.card {
   width: 100%;
   max-width: 350px;
-  margin-right: 80px;
+  height: 350px;
+  perspective: 1000px;
+  margin: 0 auto;
 }
 
-.about-text {
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  transition: transform 0.6s;
+}
+
+.front {
+  background-color: white;
+}
+
+.front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.back {
+  background-color: #333;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.social-icon {
   color: white;
-  max-width: 500px;
+  text-decoration: none;
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0);
+}
+
+.about-text {
   width: 100%;
-  text-align: center;
+  max-width: 600px;
+  padding: 20px;
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
 }
 
 .about-text h1 {
@@ -173,21 +237,23 @@ button:hover {
   border: 2px solid #f9004d;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .main {
+    flex-direction: column;
     align-items: center;
   }
 
-  .about img {
-    max-width: 80%;
-    margin: 0 10px 0 0;
-    align-items: center;
+  .card {
+    width: 80%;
+    height: auto;
+    max-width: 350px;
+    margin-bottom: 20px;
   }
 
   .about-text {
-    max-width: 95%;
-    margin-top: 10%
-    
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
   }
 
   .about-text h1 {
@@ -195,17 +261,28 @@ button:hover {
   }
 
   .about-text h5 {
-    font-size: 0.2rem;
+    font-size: 1.2rem;
   }
 
   .about-text p {
-    font-size: 0.8rem;
-    margin: 0.8rem;
-    margin-bottom: 2rem;
+    font-size: 1rem;
   }
 
   button {
-    font-size: 0.8rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 90%;
+    height: auto;
+    max-width: 350px;
+  }
+
+  .about-text {
+    width: 90%;
+    text-align: center;
   }
 }
 </style>
