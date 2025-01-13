@@ -333,6 +333,8 @@ button:hover {
   button {
     font-size: 1.1rem;
     padding: 12px 28px;
+    margin: 20px auto; /* Centers the button horizontally */
+    display: block; /* Ensures the button is treated as a block element */
   }
 }
 
@@ -374,6 +376,9 @@ button:hover {
   button {
     font-size: 1rem;
     padding: 10px 25px;
+    margin: 5px auto; /* Centers the button horizontally */
+    display: block; /* Ensures the button is treated as a block element */
   }
 }
+
 </style>
