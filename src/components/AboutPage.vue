@@ -10,16 +10,15 @@
           />
         </div>
         <div class="back">
-          <div class="profile-logo">
-            <img
-              src="https://your-logo-url.com/logo.png" 
-              alt="Profile Logo"
-              class="logo-img"
-            />
-          </div>
+          <!-- Removed the profile-logo section -->
+          <p class="deeper-dive-text">Take a deeper dive</p>
           <div class="social-links">
-            <a href="https://www.linkedin.com/in/your-profile" class="social-icon">LinkedIn</a>
-            <a href="https://github.com/your-profile" class="social-icon">GitHub</a>
+            <a href="https://www.linkedin.com/in/your-profile" class="social-icon">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/your-profile" class="social-icon">
+              <i class="fab fa-github"></i> GitHub
+            </a>
           </div>
         </div>
       </div>
@@ -39,6 +38,7 @@
     </div>
   </section>
 </template>
+
 
 <script>
 import { onMounted, onBeforeUnmount } from 'vue';
@@ -89,6 +89,12 @@ p {
   color: rgb(255, 255, 255);
 }
 
+.deeper-dive-text {
+  color: white;
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
 .dev {
   color: rgb(91, 85, 85);
   font-size: 1.5rem;
@@ -104,6 +110,7 @@ p {
   flex-wrap: wrap;
   width: 100%;
   margin: 0 auto;
+  background-color: black;
 }
 
 .hidden {
@@ -137,6 +144,8 @@ p {
   height: 350px;
   perspective: 1000px;
   margin: 0 auto;
+  
+  background-color: black;
 }
 
 .front,
@@ -161,7 +170,7 @@ p {
 }
 
 .back {
-  background-color: #333;
+  background-color: black;
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
@@ -197,6 +206,10 @@ p {
   text-decoration: none;
   margin: 10px 0;
   font-size: 1.2rem;
+}
+
+.social-icon i {
+  margin-right: 8px;
 }
 
 .card:hover .front {
@@ -265,20 +278,20 @@ button:hover {
 
 @media (max-width: 1024px) {
   .main {
-    flex-direction: row; /* Ensures the content is laid out in a row */
-    align-items: center; /* Center items vertically */
-    justify-content: space-between; /* Ensures space between the card and text */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .card {
-    margin: 20px; /* Add space around the card */
+    margin: 20px;
   }
 
   .about-text {
-    margin: 20px; /* Add space around the text */
-    text-align: left; /* Align text to the left */
-    max-width: 50%; /* Adjust text block width */
-    padding: 2rem; /* Padding around text */
+    margin: 20px;
+    text-align: left;
+    max-width: 50%;
+    padding: 2rem;
   }
 
   .about-text h1 {
@@ -299,7 +312,6 @@ button:hover {
     max-width: 60%;
   }
 }
-
 
 @media (max-width: 768px) {
   .main {
@@ -333,8 +345,8 @@ button:hover {
   button {
     font-size: 1.1rem;
     padding: 12px 28px;
-    margin: 20px auto; /* Centers the button horizontally */
-    display: block; /* Ensures the button is treated as a block element */
+    margin: 20px auto;
+    display: block;
   }
 }
 
@@ -376,8 +388,8 @@ button:hover {
   button {
     font-size: 1rem;
     padding: 10px 25px;
-    margin: 5px auto; /* Centers the button horizontally */
-    display: block; /* Ensures the button is treated as a block element */
+    margin: 5px auto;
+    display: block;
   }
 }
 
