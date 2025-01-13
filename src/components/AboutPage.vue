@@ -309,6 +309,31 @@ button:hover {
   }
 }
 
+@media (max-width: 1024px) {
+.about-text h1 {
+    font-size: 1rem;
+  }
+
+  .about-text h5 {
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+    width: 90%
+  }
+  button {
+  background: khaki;
+  color: rgb(78, 72, 72);
+  text-decoration: none;
+  border: 2px solid transparent;
+  padding: 8px;
+  width: 50%;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+}
 
 
 </style>
