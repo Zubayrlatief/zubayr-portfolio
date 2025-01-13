@@ -11,12 +11,12 @@
         </div>
         <div class="back">
           <!-- Removed the profile-logo section -->
-          <p class="deeper-dive-text">Take a deeper dive</p>
+          <p class="deeper-dive-text">Take a deeper dive ;)</p>
           <div class="social-links">
-            <a href="https://www.linkedin.com/in/your-profile" class="social-icon">
+            <a href="https://www.linkedin.com/in/zubayrlatief" class="social-icon">
               <i class="fab fa-linkedin"></i> LinkedIn
             </a>
-            <a href="https://github.com/your-profile" class="social-icon">
+            <a href="https://github.com/Zubayrlatief" class="social-icon">
               <i class="fab fa-github"></i> GitHub
             </a>
           </div>
@@ -400,13 +400,14 @@ button:hover {
   }
 }
 
-@media (max-width: 2560px) {
-  .main{
+@media (min-width: 1461px) {
+  .main {
     max-width: 1800px;
   }
-  button{
+  button {
     max-width: 20%;
   }
 }
+
 
 </style>

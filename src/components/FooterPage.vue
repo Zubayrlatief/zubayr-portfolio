@@ -154,4 +154,10 @@ a {
 a:hover {
   color: grey;
 }
+
+button:hover {
+  border: 2px solid #f9004d;
+  background-color: black;
+  color: white;
+}
 </style>
