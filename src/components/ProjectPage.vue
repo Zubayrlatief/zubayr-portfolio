@@ -38,19 +38,20 @@ export default {
   data() {
     return {
       items: [
-        {
-          image: "https://zubayrlatief.github.io/Images-/hermessfitnessfinal.png",
-          title: "Hermess Fitness | Backend project",
-          subtitle: "Vue.js",
-          github: "https://github.com/Zubayrlatief/capstone.git",
-          live: "https://capstone-965d2.web.app/",
-        },
+
         {
           image: "https://zubayrlatief.github.io/Images-/alphatower.png",
           title: "Alpha Tower | Website for bussiness",
           subtitle: "Wordpress",
           github: "https://alphatower.co.za/",
           live: "https://alphatower.co.za/",
+        },
+        {
+          image: "https://zubayrlatief.github.io/Images-/hermessfitnessfinal.png",
+          title: "Hermess Fitness | Backend project",
+          subtitle: "Vue.js",
+          github: "https://github.com/Zubayrlatief/capstone.git",
+          live: "https://hermessfitness-phi.vercel.app/",
         },
         {
           image: "https://zubayrlatief.github.io/Images-/trsecurityk9.png",
