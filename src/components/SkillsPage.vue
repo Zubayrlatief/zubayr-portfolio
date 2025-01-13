@@ -226,4 +226,16 @@ p {
     justify-items: center;
   }
 }
+
+@media (max-width: 1124px) {
+  .box-area{
+    max-width: 100%;
+    margin-right: 5%;
+  }
+  .box{
+    max-width: 6rem;
+
+  }
+}
+
 </style>

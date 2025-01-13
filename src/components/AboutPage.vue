@@ -73,7 +73,7 @@ export default {
 <style scoped>
 .about {
   width: 100%;
-  padding: 50px 0;
+  padding: 20px 0;
   background-color: black;
 }
 
@@ -91,9 +91,9 @@ p {
 
 .main {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   flex-wrap: wrap;
-  align-items: center;
   width: 100%;
   margin: 0 auto;
 }
@@ -184,7 +184,7 @@ p {
 
 .about-text {
   width: 100%;
-  max-width: 600px;
+  max-width: 55%;
   padding: 20px;
   color: white;
   background-color: black;
@@ -244,17 +244,14 @@ button:hover {
   }
 
   .card {
-    width: 80%;
-    height: auto;
-    max-width: 350px;
-    margin-bottom: 20px;
-  }
+  margin: 20px auto; /* Add auto margin for centering */
+}
 
-  .about-text {
-    width: 80%;
-    max-width: 600px;
-    text-align: center;
-  }
+.about-text {
+  margin: 20px auto; /* Add auto margin for centering */
+  text-align: center; /* Center text content */
+}
+
 
   .about-text h1 {
     font-size: 1.8rem;
@@ -274,15 +271,44 @@ button:hover {
 }
 
 @media (max-width: 480px) {
-  .card {
-    width: 90%;
-    height: auto;
-    max-width: 350px;
+  .main {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .about-text {
-    width: 90%;
-    text-align: center;
+  .card {
+    width: 90%; /* Full width with some padding */
+    max-width: 350px; /* Ensure it doesn't get too large */
+    height: auto; /* Allow height to adjust based on content */
+  }
+
+  .front img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers its container */
+    border-radius: 10px; /* Keep the rounded corners */
+  }
+  
+.about-text {
+  margin-top: 65vh; /* Add auto margin for centering */
+  text-align: center; /* Center text content */
+  align-items: center;
+  max-width: 90%;
+  padding: 2rem;
+}
+.about-text h1 {
+    font-size: 1rem;
+  }
+
+  .about-text h5 {
+    font-size: 1rem;
+  }
+
+  .about-text p {
+    font-size: 0.8rem;
   }
 }
+
+
+
 </style>
