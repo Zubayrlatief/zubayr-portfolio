@@ -400,4 +400,13 @@ button:hover {
   }
 }
 
+@media (max-width: 2560px) {
+  .main{
+    max-width: 1800px;
+  }
+  button{
+    max-width: 20%;
+  }
+}
+
 </style>
