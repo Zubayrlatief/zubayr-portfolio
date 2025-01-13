@@ -229,7 +229,7 @@ p {
 
 .about-text h5 {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: capitalize;
   margin-bottom: 25px;
   letter-spacing: 10px;
@@ -242,7 +242,7 @@ span {
 .about-text p {
   color: rgb(78, 72, 72);
   line-height: 1.6;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 45px;
   width: 95%;
 }
@@ -282,20 +282,21 @@ button:hover {
   }
 
   .about-text h1 {
-    font-size: 1.5rem;
-  }
-
-  .about-text h5 {
     font-size: 1.2rem;
   }
 
+  .about-text h5 {
+    font-size: 1rem;
+  }
+
   .about-text p {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   button {
     font-size: 1.2rem;
-    padding: 10px 25px;
+    padding: 10px 10px;
+    max-width: 60%;
   }
 }
 
