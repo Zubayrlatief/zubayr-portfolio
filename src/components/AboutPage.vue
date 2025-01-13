@@ -10,9 +10,16 @@
           />
         </div>
         <div class="back">
+          <div class="profile-logo">
+            <img
+              src="https://your-logo-url.com/logo.png" 
+              alt="Profile Logo"
+              class="logo-img"
+            />
+          </div>
           <div class="social-links">
-            <a href="#" class="social-icon">Instagram</a>
-            <a href="#" class="social-icon">TikTok</a>
+            <a href="https://www.linkedin.com/in/your-profile" class="social-icon">LinkedIn</a>
+            <a href="https://github.com/your-profile" class="social-icon">GitHub</a>
           </div>
         </div>
       </div>
@@ -35,6 +42,7 @@
 
 <script>
 import { onMounted, onBeforeUnmount } from 'vue';
+
 export default {
   methods: {
     scrollToFooter() {
@@ -156,8 +164,25 @@ p {
   background-color: #333;
   transform: rotateY(180deg);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+  gap: 15px;
+}
+
+.profile-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.logo-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .social-links {
@@ -219,6 +244,7 @@ span {
   line-height: 1.6;
   font-size: 1.2rem;
   margin-bottom: 45px;
+  width: 95%;
 }
 
 button {
@@ -237,22 +263,22 @@ button:hover {
   border: 2px solid #f9004d;
 }
 
-/* Media Queries */
 @media (max-width: 1024px) {
   .main {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row; /* Ensures the content is laid out in a row */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Ensures space between the card and text */
   }
 
   .card {
-    margin: 20px auto;
+    margin: 20px; /* Add space around the card */
   }
 
   .about-text {
-    margin: 20px auto;
-    text-align: center;
-    max-width: 90%; /* Allow more space for text */
-    padding: 2rem;
+    margin: 20px; /* Add space around the text */
+    text-align: left; /* Align text to the left */
+    max-width: 50%; /* Adjust text block width */
+    padding: 2rem; /* Padding around text */
   }
 
   .about-text h1 {
@@ -272,6 +298,7 @@ button:hover {
     padding: 10px 25px;
   }
 }
+
 
 @media (max-width: 768px) {
   .main {
