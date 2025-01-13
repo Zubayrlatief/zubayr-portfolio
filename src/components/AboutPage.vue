@@ -276,6 +276,11 @@ button:hover {
   border: 2px solid #f9004d;
 }
 
+@media (max-width: 1500px) {
+  button{
+    max-width: 20%;
+  }
+  }
 @media (max-width: 1024px) {
   .main {
     flex-direction: row;
@@ -295,21 +300,21 @@ button:hover {
   }
 
   .about-text h1 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .about-text h5 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .about-text p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   button {
     font-size: 1.2rem;
     padding: 10px 10px;
-    max-width: 60%;
+    max-width: 40%;
   }
 }
 
@@ -347,6 +352,7 @@ button:hover {
     padding: 12px 28px;
     margin: 20px auto;
     display: block;
+    width: 60%;
   }
 }
 
@@ -390,6 +396,7 @@ button:hover {
     padding: 10px 25px;
     margin: 5px auto;
     display: block;
+    max-width: 50%;
   }
 }
 
