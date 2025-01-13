@@ -91,8 +91,8 @@ p {
 
 .main {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   width: 100%;
   margin: 0 auto;
@@ -237,24 +237,26 @@ button:hover {
   border: 2px solid #f9004d;
 }
 
-@media (max-width: 768px) {
+/* Media Queries */
+@media (max-width: 1024px) {
   .main {
     flex-direction: column;
     align-items: center;
   }
 
   .card {
-  margin: 20px auto; /* Add auto margin for centering */
-}
+    margin: 20px auto;
+  }
 
-.about-text {
-  margin: 20px auto; /* Add auto margin for centering */
-  text-align: center; /* Center text content */
-}
-
+  .about-text {
+    margin: 20px auto;
+    text-align: center;
+    max-width: 90%; /* Allow more space for text */
+    padding: 2rem;
+  }
 
   .about-text h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .about-text h5 {
@@ -262,11 +264,47 @@ button:hover {
   }
 
   .about-text p {
+    font-size: 1.1rem;
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 10px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .about-text {
+    margin: 20px auto;
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .about-text h1 {
+    font-size: 1.4rem;
+  }
+
+  .about-text h5 {
+    font-size: 1rem;
+  }
+
+  .about-text p {
     font-size: 1rem;
   }
 
   button {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    padding: 12px 28px;
   }
 }
 
@@ -277,63 +315,37 @@ button:hover {
   }
 
   .card {
-    width: 90%; /* Full width with some padding */
-    max-width: 350px; /* Ensure it doesn't get too large */
-    height: auto; /* Allow height to adjust based on content */
+    width: 90%;
+    height: auto;
   }
 
   .front img {
-    width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the image covers its container */
-    border-radius: 10px; /* Keep the rounded corners */
+    width: 100%;
+    height: auto;
   }
-  
-.about-text {
-  margin-top: 65vh; /* Add auto margin for centering */
-  text-align: center; /* Center text content */
-  align-items: center;
-  max-width: 90%;
-  padding: 2rem;
-}
-.about-text h1 {
-    font-size: 1rem;
+
+  .about-text {
+    margin-top: 67vh;
+    text-align: center;
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .about-text h1 {
+    font-size: 1.2rem;
   }
 
   .about-text h5 {
-    font-size: 1rem;
-  }
-
-  .about-text p {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 1024px) {
-.about-text h1 {
-    font-size: 1rem;
-  }
-
-  .about-text h5 {
-    align-items: center;
     font-size: 1rem;
   }
 
   .about-text p {
     font-size: 0.9rem;
-    width: 90%
   }
+
   button {
-  background: khaki;
-  color: rgb(78, 72, 72);
-  text-decoration: none;
-  border: 2px solid transparent;
-  padding: 8px;
-  width: 50%;
-  transition: 0.4s;
-  border-radius: 30px;
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
 }
-}
-
-
 </style>

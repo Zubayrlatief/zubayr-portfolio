@@ -150,5 +150,13 @@ p {
     display: inline-block; /* Ensures proper centering within text-align */
   }
 }
+@media (max-width: 340px){
+  .box-area{
+    max-width: 10%;
+  }
+  .box{
+    max-width: 50%;
+  }
+}
 
 </style>
