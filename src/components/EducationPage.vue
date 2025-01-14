@@ -258,4 +258,47 @@ p {
     font-size: 6px;
   }
 }
+@media (max-width: 480px) {
+  .box img {
+    width: 70%;
+    border-radius: 10px;
+    transition: transform 0.5s;
+    display: inline-block;
+  }
+
+  .overlay h3 {
+    font-size: 1rem; /* Consistent font size */
+  }
+
+  .overlay h5 {
+    font-size: 0.9rem; /* Consistent font size */
+  }
+
+  .overlay p {
+    font-size: 0.8rem; /* Consistent font size */
+  }
+}
+
+@media (max-width: 340px) {
+  .box-area {
+    max-width: 100%;
+  }
+
+  .box {
+    max-width: 100%;
+  }
+
+  .overlay h3 {
+    font-size: 1rem; /* Consistent font size */
+  }
+
+  .overlay h5 {
+    font-size: 0.9rem; /* Consistent font size */
+  }
+
+  .overlay p {
+    font-size: 0.8rem; /* Consistent font size */
+  }
+}
+
 </style>

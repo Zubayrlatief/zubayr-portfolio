@@ -398,6 +398,9 @@ button:hover {
     display: block;
     max-width: 50%;
   }
+  .deeper-dive-text{
+    margin-top: 80%;
+  }
 }
 
 @media (min-width: 1461px) {

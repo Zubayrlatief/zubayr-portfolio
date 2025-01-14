@@ -149,6 +149,18 @@ p {
     transition: transform 0.5s;
     display: inline-block; /* Ensures proper centering within text-align */
   }
+  .overlay h3 {
+    font-size: 15px;
+  }
+
+  .overlay h5 {
+    font-size: 12px;
+  }
+
+  .overlay p {
+    font-size: 8px;
+    margin-bottom: 20%;
+  }
 }
 @media (max-width: 340px){
   .box-area{
@@ -158,5 +170,6 @@ p {
     max-width: 50%;
   }
 }
+
 
 </style>
