@@ -150,16 +150,16 @@ p {
     display: inline-block; /* Ensures proper centering within text-align */
   }
   .overlay h3 {
-    font-size: 15px;
+    font-size: 1rem;
   }
 
   .overlay h5 {
-    font-size: 12px;
+    font-size: 0.8rem;
   }
 
   .overlay p {
-    font-size: 8px;
-    margin-bottom: 20%;
+    font-size: 0.7rem;
+    margin-bottom: 25%;
   }
 }
 @media (max-width: 340px){

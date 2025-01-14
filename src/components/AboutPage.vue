@@ -30,7 +30,7 @@
           Entering the world of software is exciting. Ample knowledge to gain
           and limitless ceilings to reach. Obsessed and passionate, I want to
           learn everything about it. Keeping disciplined and healthy is a must
-          for me; I work out 5 times a week, having a love for surfing and
+          for me. I work out 5 times a week, having a love for surfing and
           gaining knowledge in every aspect possible.
         </p>
         <button type="button" @click="scrollToFooter">Get in touch</button>
